@@ -1,0 +1,6 @@
+# Nerede Kılacağım? - robots.txt
+# Not: Alan adınızı yayınladığınız adresle güncelleyin.
+User-agent: *
+Allow: /
+
+Sitemap: https://neredekilcam.uz/sitemap.xml

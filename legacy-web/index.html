@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Yakınındaki Camiler ve Mescitler | Nerede Kılacağım?</title>
+<meta name="description" content="Nerede Kılacağım? ile çevrenizdeki cami ve mescitleri bulun, Diyanet namaz vakitlerini öğrenin, puanlayın ve yol tarifi alın. Türkiye'nin cami & mescit haritası.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#2563EB">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232563EB'/><path d='M22 18l10 10 10-10' stroke='white' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M32 28v6' stroke='white' stroke-width='4' stroke-linecap='round'/><path d='M24 42v11h16V42' stroke='white' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/><path d='M20 32v7M44 32v7' stroke='white' stroke-width='4' fill='none' stroke-linecap='round'/></svg>">
+<link rel="canonical" href="https://neredekilcam.uz/">
+<link rel="sitemap" href="https://neredekilcam.uz/sitemap.xml">
+<!-- Google Search Console doğrulaması: doğrulama kodunuzu alınca aşağıdaki satırın yorumunu kaldırın -->
+<!-- <meta name="google-site-verification" content="BURAYA_DOGRULAMA_KODU"> -->
+<!-- Open Graph / Sosyal medya paylaşımı -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nerede Kılacağım?">
+<meta property="og:title" content="Nerede Kılacağım? – Yakınındaki Camiler, Mescitler ve Namaz Vakitleri">
+<meta property="og:description" content="Çevrenizdeki cami ve mescitleri bulun, Diyanet namaz vakitlerini öğrenin, mescitleri puanlayın ve yol tarifi alın.">
+<meta property="og:url" content="https://neredekilcam.uz/">
+<meta property="og:image" content="https://neredekilcam.uz/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nerede Kılacağım? – Yakınındaki Camiler, Mescitler ve Namaz Vakitleri">
+<meta name="twitter:description" content="Çevrenizdeki cami ve mescitleri bulun, namaz vakitlerini öğrenin, puanlayın ve yol tarifi alın.">
+<meta name="twitter:image" content="https://neredekilcam.uz/og-image.png">
+<!-- Site hızı: preconnect / dns-prefetch -->
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://tile.openstreetmap.org">
+<link rel="preconnect" href="https://overpass-api.de">
+<link rel="preconnect" href="https://ezanvakti.imsakiyem.com">
+<link rel="preconnect" href="https://ezanvakti.emushaf.net">
+<link rel="preconnect" href="https://router.project-osrm.org">
+<link rel="dns-prefetch" href="https://photon.komoot.io">
+<link rel="dns-prefetch" href="https://nominatim.openstreetmap.org">
+<link rel="dns-prefetch" href="https://ipwho.is">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Nerede Kılacağım?","url":"https://neredekilcam.uz/","description":"Cami ve mescit bulucu + Diyanet namaz vakitleri.","inLanguage":"tr-TR"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Nerede Kılacağım? nedir?","acceptedAnswer":{"@type":"Answer","text":"Nerede Kılacağım?, bulunduğunuz konuma en yakın cami ve mescitleri gösteren, Diyanet namaz vakitlerini sunan, mescitleri puanlamanızı ve favorilere eklemenizi sağlayan bir uygulamadır."}},
+{"@type":"Question","name":"Namaz vakitleri nasıl belirleniyor?","acceptedAnswer":{"@type":"Answer","text":"Vakitler ülke genelinde kullanılan ezan vakitleri veri kaynaklarından (imsakiyem ve emüşaf) çekilir ve konumunuza en yakın ilçenin vakitleri gösterilir."}},
+{"@type":"Question","name":"Konumum nasıl kullanılıyor?","acceptedAnswer":{"@type":"Answer","text":"Konumunuz yalnızca yakınınızdaki mescitleri listelemek ve namaz vakti ilçenizi bulmak için kullanılır. Konum bilgisi sunucularımızda saklanmaz; yalnızca cihazınızın tarayıcısında işlenir."}},
+{"@type":"Question","name":"Mescit nasıl ekleyebilirim veya puanlayabilirim?","acceptedAnswer":{"@type":"Answer","text":"Alt menüdeki \"Mescit Ekle\" butonu ile yeni mescit ekleyebilir; bir mescide yaklaştığınızda çıkan puanlama ekranını kullanarak gerçek yerinde iken puanlayabilirsiniz."}},
+{"@type":"Question","name":"Hesap oluşturmak zorunlu mu?","acceptedAnswer":{"@type":"Answer","text":"Evet, puanlamaların ve favorilerin hesabınıza bağlanması için giriş yapmanız gerekir. Kayıt e-posta ve şifre ile yapılır; şifreniz cihazınızda düz metin olarak değil, tuzlanmış özet (hash) olarak saklanır."}}
+]}
+</script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--green:#0F6B4C;--green-dark:#0A4E37;--green-light:#E8F5EE;--gold:#C9A24B;--gold-light:#FBF4E0;--cream:#FAF8F3;--paper:#FDFCF9;--ink:#1C1F1E;--ink-soft:#5B6360;--line:#E5E0D4;--radius:12px;--radius-lg:16px;--font-ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Helvetica Neue",sans-serif;--font-head:"Segoe UI",system-ui,-apple-system,Roboto,Arial,"Helvetica Neue",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#EDEAE2;font-family:var(--font-ui);color:var(--ink);padding:12px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.device{width:390px;height:844px;background:var(--cream);border-radius:44px;box-shadow:0 10px 30px rgba(15,23,42,.20),0 0 0 10px #1c1f1e inset;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:126px;height:34px;background:#1c1f1e;border-radius:0 0 22px 22px;z-index:50}
+.statusbar{height:54px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 28px 8px;font-size:14px;font-weight:600;color:var(--ink);flex-shrink:0;z-index:51;position:relative}
+.screens{flex:1;position:relative;overflow:hidden}
+.screen{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;-ms-overflow-style:none;scrollbar-width:none;display:none;animation:fadeIn .22s ease;z-index:1}
+.screen.active{display:block}
+.screen::-webkit-scrollbar{display:none}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+h1,h2,h3{font-family:var(--font-head);margin:0}
+.navbar{height:76px;background:var(--paper);border-top:1px solid var(--line);display:flex;align-items:flex-start;justify-content:space-around;flex-shrink:0;padding-top:6px;position:relative;z-index:10}
+.navbtn{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--ink-soft);font-family:var(--font-ui);font-size:9.5px;font-weight:500;padding:6px 2px;min-height:44px;min-width:0;flex:1 1 0;border-radius:12px;transition:color .15s;position:relative}
+.navbtn span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.navbtn:hover{color:var(--green)}
+.navbtn svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+.navbtn.active{color:var(--green);font-weight:600;background:var(--green-light)}
+.harita-screen{padding:0 !important}
+#leaflet-map{position:absolute;inset:0;background:#E4EBF4}
+.vakit-pill{position:absolute;top:12px;left:12px;right:12px;z-index:410;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:border-color .15s}
+.vp-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;animation:pulse 2s infinite}
+.vp-text{display:flex;align-items:baseline;gap:8px;font-size:13px}
+.vp-name{font-weight:600;font-family:var(--font-head);color:var(--ink)}
+.vp-time{color:var(--green);font-weight:600;font-variant-numeric:tabular-nums;font-family:var(--font-head)}
+.vp-loc{font-size:11px;color:var(--ink-soft);margin-left:auto;max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.vp-chevron{color:var(--ink-soft);font-size:16px;flex-shrink:0}
+.filter-bar{position:absolute;top:76px;left:0;right:0;display:flex;gap:8px;padding:0 12px;overflow-x:auto;z-index:400;-ms-overflow-style:none;scrollbar-width:none}
+.filter-bar::-webkit-scrollbar{display:none}
+.chip{background:var(--paper);border:1px solid var(--line);padding:8px 14px;border-radius:var(--radius);font-size:12px;font-weight:500;white-space:nowrap;flex-shrink:0;cursor:pointer;color:var(--ink);min-height:36px;display:flex;align-items:center;transition:border-color .15s,background .15s,color .15s}
+.chip:hover{border-color:var(--green)}
+.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.map-controls{position:absolute;right:12px;bottom:210px;z-index:420;display:flex;flex-direction:column;gap:8px}
+.map-ctrl-btn{width:44px;height:44px;border-radius:var(--radius);border:1px solid var(--line);background:var(--paper);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink);font-size:18px;font-weight:600;transition:background .15s}
+.map-ctrl-btn:hover{background:var(--cream)}
+.map-ctrl-btn.recenter{color:var(--gold)}
+.map-ctrl-btn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2}
+.geo-banner{position:absolute;top:130px;left:12px;right:12px;z-index:420;background:rgba(28,31,30,.92);color:#fff;font-size:12px;font-weight:500;padding:10px 14px;border-radius:var(--radius);display:none;align-items:center;gap:8px}
+.geo-banner.show{display:flex}
+.geo-banner .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex-shrink:0;animation:pulse 1.5s infinite}
+.sheet{position:absolute;left:0;right:0;bottom:0;z-index:400;background:var(--paper);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:12px 18px 24px;box-shadow:0 -6px 20px rgba(0,0,0,.08);display:none;animation:slideUp .25s ease}
+.sheet.show{display:block}
+.sheet-handle{width:36px;height:4px;background:var(--line);border-radius:4px;margin:0 auto 12px}
+.sheet-top{display:flex;gap:12px}
+.sheet-thumb{width:60px;height:60px;border-radius:14px;flex-shrink:0;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff}
+.sheet-name{font-weight:600;font-size:16px;font-family:var(--font-head)}
+.sheet-meta{font-size:12px;color:var(--ink-soft);margin-top:2px}
+.sheet-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.tag{background:var(--green-light);color:var(--green);font-size:11px;font-weight:500;padding:4px 10px;border-radius:8px}
+.sheet-actions{display:flex;gap:10px;margin-top:14px}
+.mode-toggle{display:flex;gap:8px;margin-top:12px}
+.mode-btn{flex:1;border:1.5px solid var(--line);background:var(--paper);padding:10px;border-radius:var(--radius);font-size:12px;font-weight:600;cursor:pointer;color:var(--ink);min-height:44px;display:flex;align-items:center;justify-content:center;transition:all .15s;font-family:var(--font-ui)}
+.mode-btn:hover{border-color:var(--green)}
+.mode-btn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.btn{flex:1;border:none;border-radius:var(--radius);padding:12px;font-weight:600;font-size:13px;cursor:pointer;font-family:var(--font-ui);min-height:44px;transition:background .15s,color .15s,border-color .15s}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-dark)}
+.btn-ghost{background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+.route-card{position:absolute;top:142px;left:12px;right:12px;z-index:415;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;display:none;align-items:center;gap:12px}
+.route-card.show{display:flex;animation:fadeIn .2s ease}
+.route-card .rc-icon{width:40px;height:40px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;background:var(--green-light);color:var(--green)}
+.route-card .rc-body{flex:1;min-width:0}
+.route-card .rc-main{font-weight:600;font-size:15px;font-family:var(--font-head)}
+.route-card .rc-sub{font-size:11px;color:var(--ink-soft);margin-top:2px}
+.route-card .rc-close{width:32px;height:32px;border-radius:50%;border:none;background:var(--cream);color:var(--ink-soft);cursor:pointer;font-size:16px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .15s}
+.route-card .rc-close:hover{background:var(--line)}
+.vakit-screen{padding:0 0 24px}
+.vakit-hero{background:var(--green-dark);padding:24px 22px 28px;color:#fff;position:relative;overflow:hidden}
+.vakit-hero::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;border:1px solid rgba(255,255,255,.1)}
+.vh-label{font-size:12px;color:rgba(255,255,255,.7);font-weight:500}
+.vh-vakit{font-size:24px;font-weight:700;margin-top:4px;font-family:var(--font-head)}
+.vh-countdown{font-size:48px;font-weight:700;font-family:var(--font-head);margin-top:12px;letter-spacing:1px;font-variant-numeric:tabular-nums}
+.vh-sub{font-size:13px;color:rgba(255,255,255,.7);margin-top:4px}
+.vh-location{font-size:12px;color:rgba(255,255,255,.6);margin-top:12px;display:flex;align-items:center;gap:4px}
+.vh-location svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.vakit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px 22px}
+.vakit-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:center;transition:all .15s}
+.vakit-card.current{border-color:var(--green);background:var(--green-light)}
+.vakit-card .vk-name{font-size:12px;color:var(--ink-soft);font-weight:500}
+.vakit-card .vk-time{font-size:18px;font-weight:700;margin-top:4px;font-family:var(--font-head);font-variant-numeric:tabular-nums}
+.vakit-card.current .vk-name,.vakit-card.current .vk-time{color:var(--green)}
+.section-header{padding:20px 22px 10px}
+.section-header h3{font-size:16px;font-weight:600}
+.section-header p{font-size:12px;color:var(--ink-soft);margin-top:2px}
+.nearby-list{display:flex;flex-direction:column;gap:10px;padding:0 22px}
+.nearby-card{display:flex;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;align-items:center;cursor:pointer;transition:all .18s;min-height:72px}
+.nearby-card:hover{border-color:var(--green)}
+.nearby-card:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.nearby-thumb{width:56px;height:56px;border-radius:12px;flex-shrink:0;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:22px}
+.nearby-info{flex:1;min-width:0}
+.nearby-info .name{font-weight:600;font-size:14px}
+.nearby-info .meta{font-size:12px;color:var(--ink-soft);margin-top:2px;display:flex;align-items:center;gap:4px}
+.star{color:var(--gold)}
+.skel-card{display:flex;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;align-items:center;justify-content:center;min-height:72px;color:var(--ink-soft);font-size:12px}
+.detay-body{padding:16px 22px 24px}
+.back-btn{position:absolute;top:12px;left:12px;z-index:20;width:40px;height:40px;border-radius:50%;background:rgba(28,31,30,.7);display:flex;align-items:center;justify-content:center;cursor:pointer;border:none}
+.back-btn svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2}
+.detay-title{font-size:20px;font-weight:600}
+.rating-row{display:flex;align-items:center;gap:8px;margin-top:6px;color:var(--ink-soft);font-size:13px}
+.rating-badge{background:var(--gold);color:#fff;font-weight:700;font-size:12px;padding:3px 10px;border-radius:8px}
+.amenity-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.breakdown{margin-top:16px}
+.bd-row{display:flex;align-items:center;gap:10px;margin-top:8px}
+.bd-label{width:100px;font-size:12px;color:var(--ink-soft)}
+.bd-bar{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}
+.bd-fill{height:100%;background:var(--green);border-radius:6px;transition:width .4s ease}
+.bd-val{font-size:12px;font-weight:600;width:28px;text-align:right}
+.review{border-top:1px solid var(--line);padding:12px 0}
+.review-head{display:flex;justify-content:space-between;align-items:center}
+.review-user{font-weight:600;font-size:13px}
+.review-text{font-size:13px;color:var(--ink-soft);margin-top:4px;line-height:1.5}
+.add-body{padding:20px 22px}
+.field{margin-top:14px}
+.field label{font-size:12px;font-weight:600;color:var(--ink-soft);display:block}
+.field input,.field select,.field textarea{width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--radius);font-family:var(--font-ui);font-size:14px;background:var(--paper);color:var(--ink);min-height:44px;transition:border-color .15s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);outline:none}
+.amenity-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.amenity-choice{border:1px solid var(--line);padding:8px 12px;border-radius:var(--radius);font-size:12px;cursor:pointer;user-select:none;min-height:40px;display:flex;align-items:center;transition:all .15s}
+.amenity-choice:hover{border-color:var(--green)}
+.amenity-choice.on{background:var(--green);color:#fff;border-color:var(--green)}
+.upload-box{margin-top:8px;border:1.5px dashed var(--line);border-radius:var(--radius);padding:24px;text-align:center;color:var(--ink-soft);font-size:12px;cursor:pointer;min-height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:border-color .15s}
+.upload-box:hover{border-color:var(--green)}
+.simple-body{padding:24px 22px}
+.profile-head{display:flex;align-items:center;gap:14px}
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--green)}
+.stat-row{margin-top:20px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--paper)}
+.stat-card{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+.stat-card:last-child{border-bottom:none}
+.stat-card svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.8;flex-shrink:0}
+.stat-num{font-family:var(--font-head);font-size:18px;font-weight:700;color:var(--green);min-width:34px}
+.stat-lbl{font-size:13px;color:var(--ink-soft);margin-top:2px}
+.empty-state{text-align:center;color:var(--ink-soft);font-size:13px;margin-top:60px;padding:0 30px;line-height:1.6}
+.empty-state svg{width:48px;height:48px;stroke:var(--line);fill:none;stroke-width:1.5;margin-bottom:12px}
+.settings-group{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:12px}
+.settings-item{padding:14px 16px;border-bottom:1px solid var(--line);font-size:14px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:background .1s}
+.settings-item:last-child{border-bottom:none}
+.settings-item:hover{background:var(--cream)}
+.arrival-modal{position:absolute;inset:0;z-index:1000;background:rgba(37,99,235,.97);display:none;flex-direction:column;align-items:center;justify-content:center;padding:36px 30px;color:#fff;text-align:center}
+.arrival-modal.show{display:flex;animation:fadeIn .3s ease}
+.arrival-modal .am-icon{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:32px;margin-bottom:20px}
+.arrival-modal h2{font-size:20px;font-weight:700}
+.arrival-modal p{font-size:13px;color:rgba(255,255,255,.75);margin-top:8px;max-width:280px;line-height:1.5}
+.am-stars{display:flex;gap:8px;margin-top:28px}
+.am-star{width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:28px;color:rgba(255,255,255,.3);cursor:pointer;transition:all .15s;border:none;background:none}
+.am-star:hover{color:var(--gold)}
+.am-star.on{color:var(--gold)}
+.am-categories{display:flex;flex-direction:column;gap:8px;width:100%;max-width:300px;margin-top:20px}
+.am-cat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:var(--radius);padding:10px 14px;text-align:left;display:flex;align-items:center;justify-content:space-between;font-size:13px;cursor:pointer;transition:all .15s}
+.am-cat:hover{background:rgba(255,255,255,.15)}
+.am-cat.on{background:rgba(255,255,255,.2);border-color:var(--gold)}
+.am-cat-label{display:flex;align-items:center;gap:8px}
+.am-cat-vals{display:flex;gap:4px}
+.am-cat-val{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:rgba(255,255,255,.5);cursor:pointer;transition:all .15s;border:1px solid transparent}
+.am-cat-val.on{color:var(--gold);border-color:var(--gold);background:rgba(255,255,255,.1)}
+.am-comment{width:100%;max-width:300px;margin-top:16px;border-radius:var(--radius);border:none;padding:12px 14px;font-family:var(--font-ui);font-size:13px;resize:none;height:60px;background:rgba(255,255,255,.1);color:#fff}
+.am-comment::placeholder{color:rgba(255,255,255,.4)}
+.am-submit{width:100%;max-width:300px;margin-top:14px;border:none;border-radius:var(--radius);padding:12px;font-weight:700;font-size:14px;cursor:pointer;background:var(--gold);color:#1C1F1E;min-height:48px;font-family:var(--font-ui);transition:all .15s}
+.am-submit:disabled{background:rgba(255,255,255,.15);color:rgba(255,255,255,.4);cursor:not-allowed}
+.am-submit:not(:disabled):active{background:var(--gold)}
+.am-hint{font-size:11px;color:rgba(255,255,255,.5);margin-top:10px}
+.am-skip{background:none;border:1px solid rgba(255,255,255,.35);color:rgba(255,255,255,.8);border-radius:var(--radius);padding:10px 16px;font-size:12px;font-weight:600;cursor:pointer;font-family:var(--font-ui);margin-top:10px;min-height:44px;min-width:200px;transition:all .15s}
+.am-skip:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.6)}
+.toast{position:absolute;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:var(--radius);font-size:13px;font-weight:500;opacity:0;pointer-events:none;z-index:998;transition:all .25s ease;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.leaflet-control-zoom{display:none !important}
+.leaflet-control-attribution{font-size:9px !important;border-radius:4px !important}
+.leaflet-popup-content-wrapper{border-radius:var(--radius) !important;font-family:var(--font-ui) !important}
+.leaflet-popup-content{margin:10px 14px !important;font-size:13px !important}
+.device.noauth .navbar{display:none}
+.login-wrap{min-height:100%;display:flex;flex-direction:column;justify-content:center;padding:44px 30px;background:var(--green-dark);color:#fff}
+.login-logo{width:84px;height:84px;border-radius:26px;margin:0 auto;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:42px}
+.login-title{text-align:center;font-size:24px;font-weight:700;font-family:var(--font-head);margin-top:16px}
+.login-tag{text-align:center;font-size:13px;color:rgba(255,255,255,.75);margin-top:6px}
+.auth-card{margin-top:26px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-lg);padding:20px 18px;color:var(--ink)}
+.auth-tabs{display:flex;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:4px;gap:4px}
+.auth-tab{flex:1;border:1px solid transparent;background:none;padding:10px;border-radius:12px;font-weight:600;font-size:13px;cursor:pointer;color:var(--ink-soft);font-family:var(--font-ui)}
+.auth-tab.on{background:var(--paper);color:var(--green);border:1px solid var(--line)}
+.auth-form{margin-top:14px}
+.auth-form .field label{color:var(--green)}
+.auth-divider{display:flex;align-items:center;gap:12px;margin:16px 0;color:var(--ink-soft);font-size:12px}
+.auth-divider::before,.auth-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.google-btn{width:100%;display:flex;align-items:center;justify-content:center;gap:10px;border:1.5px solid var(--line);background:var(--paper);border-radius:var(--radius);padding:12px;font-family:var(--font-ui);font-size:13px;font-weight:600;cursor:pointer;color:var(--ink);min-height:48px}
+.google-btn svg{width:20px;height:20px}
+.google-btn:active{background:var(--cream)}
+.google-soon{font-size:11px;color:var(--ink-soft);text-align:center;margin-top:8px}
+.auth-err{display:none;margin-top:12px;background:#FDE8E8;color:#B3261E;border-radius:var(--radius);padding:10px 12px;font-size:12px;font-weight:500}
+.auth-err.show{display:block}
+.auth-hint{font-size:11px;color:rgba(255,255,255,.7);text-align:center;margin-top:16px;line-height:1.55}
+.logout-btn{width:100%;margin-top:12px}
+.add-loc-badge{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:12px;font-weight:500;color:var(--green);background:var(--green-light);padding:9px 12px;border-radius:var(--radius)}
+.photo-previews{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.photo-previews img{width:78px;height:78px;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+.fav-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.fav-card{display:flex;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;align-items:center;cursor:pointer;transition:all .18s;min-height:72px}
+.fav-card:hover{border-color:var(--green)}
+.fav-card .fav-x{width:34px;height:34px;border-radius:50%;border:none;background:var(--cream);color:var(--ink-soft);cursor:pointer;font-size:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.fav-card .fav-x:hover{background:#FDE8E8;color:#B3261E}
+.detay-photos{display:flex;gap:6px;overflow-x:auto;height:200px;-ms-overflow-style:none;scrollbar-width:none}
+.detay-photos::-webkit-scrollbar{display:none}
+.detay-photos .photo-thumb{height:200px;width:150px;flex-shrink:0;object-fit:cover;border-radius:14px;background:var(--line)}
+.detay-photos .photo-empty{width:100%;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:12px;background:var(--cream);border:1.5px dashed var(--line);border-radius:14px}
+.review-empty{font-size:12px;color:var(--ink-soft);margin-top:10px}
+.nearby-list>.empty-state{margin-top:8px}
+/* ==== Responsive: küçük ekran / kısa yükseklik ==== */
+@media (max-width:430px), (max-height:760px){
+  body{padding:8px}
+  .device{width:min(390px,100vw);height:min(844px,100dvh);max-width:100%;border-radius:0;box-shadow:none}
+  .notch{display:none}
+  .statusbar{height:46px}
+}
+/* Temiz tasarım: düz renkler, klişe öğeler yok (no gradyan, no glass, no gölge katmanları, sistem font) */
+:root{
+  --green-50:#EFF6FF;--green-100:#DBEAFE;--green-200:#BFDBFE;--green-300:#93C5FD;--green-400:#60A5FA;--green-500:#3B82F6;--green-600:#2563EB;--green-700:#1D4ED8;--green-800:#1E40AF;--green-900:#1E3A8A;--green-950:#172554;
+  --slate-50:#F8FAFC;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-300:#CBD5E1;--slate-400:#94A3B8;--slate-500:#64748B;--slate-600:#475569;--slate-700:#334155;--slate-800:#1E293B;--slate-900:#0F172A;--slate-950:#020617;
+  --green:#3B82F6;--green-dark:#1E3A8A;--green-light:#EFF6FF;--ring:#1C1F1E;
+  --cream:#F2F5F9;--paper:#FFFFFF;--ink:#0F172A;--ink-soft:#64748B;--line:#E2E8F0;
+  --shadow-card:none;
+  --font-ui:system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Helvetica Neue",sans-serif;
+  --font-head:system-ui,-apple-system,"Segoe UI",Roboto,Arial,"Helvetica Neue",sans-serif;
+}
+html{scrollbar-width:thin;scrollbar-color:rgba(148,163,184,.35) transparent}
+*::selection{background:var(--green-500);color:#fff}
+body{background:#EEF1F5}
+h1,h2,h3{letter-spacing:0}
+#leaflet-map{background:var(--cream)}
+.vakit-pill{background:var(--paper);border-color:var(--line)}
+.vp-time{color:var(--green-600)}
+.route-card{background:var(--paper)}
+.sheet{background:var(--paper)}
+.navbar{background:var(--paper)}
+.chip{background:var(--paper)}
+.chip:hover{border-color:var(--green-300)}
+.chip.on{background:var(--green-600);border-color:var(--green-700)}
+.map-ctrl-btn{background:var(--paper)}
+.sheet-handle{background:var(--line)}
+.field label{letter-spacing:0;color:var(--green-800)}
+.field input,.field select,.field textarea{background:var(--paper);border-color:var(--line)}
+.field input:hover,.field select:hover,.field textarea:hover{border-color:var(--green-400)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green-600);box-shadow:0 0 0 3px rgba(59,130,246,.14)}
+.btn{border-radius:10px}
+.btn:active:not(:disabled){transform:scale(.98)}
+.btn-primary{background:var(--green-600)}
+.btn-primary:hover{background:var(--green-700)}
+.btn-ghost{background:var(--paper)}
+.auth-card{background:var(--paper)}
+.auth-tab{border-radius:8px}
+.auth-tab.on{background:var(--paper);border-color:var(--green-300)}
+.google-btn{background:var(--paper)}
+.info-block,.faq-item,.review-card,.nearby-card,.fav-card,.vakit-card,.settings-group,.stat-row{box-shadow:none}
+.nearby-card,.fav-card,.vakit-card{background:var(--paper)}
+.nearby-card:hover,.fav-card:hover{border-color:var(--green-300)}
+.nearby-thumb,.login-logo,.sheet-thumb{background:var(--green-600)}
+.avatar{width:58px;height:58px;border-radius:50%;background:var(--green-600);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:22px;user-select:none;flex-shrink:0}
+.nearby-thumb svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mode-btn{border-radius:8px}
+.mode-btn.on{background:var(--green-600);border-color:var(--green-700)}
+.amenity-choice{border-radius:8px;background:var(--paper)}
+.amenity-choice.on{background:var(--green-600);border-color:var(--green-700)}
+.upload-box{background:var(--paper)}
+.vakit-hero{background:var(--green-800)}
+.vakit-card.current{border-color:var(--green-400)}
+.footer{background:var(--green-900)}
+.rating-badge{background:var(--gold)}
+.sticky-cta{background:var(--green-600)}
+.toast{background:var(--slate-900)}
+.breadcrumb a{color:var(--green-600)}
+.gmaps-link,.addr-link{color:var(--green-600)}
+.settings-item:hover{background:var(--cream)}
+.leaflet-popup-content-wrapper{border-radius:10px!important}
+.leaflet-control-attribution{opacity:.85}
+.am-star{font-size:30px;color:rgba(255,255,255,.28);transition:color .15s}
+.am-star:hover{color:#FACC15}
+.am-star.on{color:#FACC15}
+.am-cat:hover{background:rgba(255,255,255,.14)}
+.am-cat.on{background:rgba(255,255,255,.22);border-color:var(--gold)}
+.am-submit:not(:disabled):hover{filter:brightness(1.06)}
+.arrival-modal{background:var(--green-800)}
+.thank-hero .tk-icon{background:var(--green-light)}
+.empty-state svg{stroke:var(--slate-300)}
+html.theme-dark{--cream:#0E1622;--paper:#131C29;--ink:#E7EDF5;--ink-soft:#94A3B8;--line:#223047;--gold:#E3B84F;--ring:#070C12}
+  html.theme-dark body{background:#0A0F17}
+  html.theme-dark .device{background:var(--cream)}
+  html.theme-dark .notch{background:var(--ring)}
+  html.theme-dark .statusbar{color:var(--ink)}
+  html.theme-dark #leaflet-map{background:#070C12}
+  html.theme-dark .leaflet-tile-pane{filter:invert(1) hue-rotate(180deg) brightness(.94) contrast(.9) saturate(.7)}
+  html.theme-dark .leaflet-control-attribution{background:rgba(9,14,12,.75)!important;color:var(--ink-soft)!important}
+  html.theme-dark .leaflet-control-attribution a{color:var(--green-300)!important}
+  html.theme-dark .leaflet-popup-content-wrapper{color:var(--ink);border-color:var(--line)}
+  html.theme-dark .field label{color:var(--green-300)}
+  html.theme-dark .auth-form .field label{color:var(--green-400)}
+  html.theme-dark .chip{background:#1A2433}
+  html.theme-dark .amenity-choice{background:#1A2433}
+  html.theme-dark .btn-ghost{background:#1A2433}
+  html.theme-dark .navbar{background:#0E1622}
+  html.theme-dark .empty-state svg{stroke:var(--slate-600)}
+  html.theme-dark .sheet-handle{background:rgba(148,163,184,.4)}
+  html.theme-dark .navbtn.active{background:rgba(59,130,246,.16);color:var(--green-300)}
+/* ==== SEO / UX ekranları ==== */
+.cta-row{display:flex;gap:10px;padding:14px 22px 0}
+.cta-row .btn{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px}
+.list-filters{position:static;display:flex;gap:8px;padding:14px 22px 0;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.list-filters::-webkit-scrollbar{display:none}
+.consent-modal{position:absolute;inset:0;z-index:1001;background:var(--paper);display:none;flex-direction:column;align-items:stretch;justify-content:center;padding:44px 30px;text-align:left;overflow-y:auto}
+.consent-modal.show{display:flex;animation:fadeIn .3s ease}
+.cm-icon{width:64px;height:64px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;margin:0 auto 18px}
+.cm-icon svg{stroke:var(--green-600);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.consent-modal h2{font-size:20px;font-weight:700;text-align:center;letter-spacing:-.01em}
+.cm-lede{font-size:13px;color:var(--ink-soft);line-height:1.7;margin-top:8px;text-align:center}
+.cm-note{font-size:12px;color:var(--ink-soft);line-height:1.7;margin-top:18px}
+.cm-links{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.cm-links a{display:flex;align-items:center;justify-content:space-between;padding:13px 14px;border:1px solid var(--line);border-radius:12px;color:var(--ink);font-size:13px;font-weight:600;text-decoration:none;transition:border-color .15s,background .15s}
+.cm-links a:hover{border-color:var(--green-400);background:var(--green-light)}
+.cm-links a::after{content:"\203A";color:var(--green-600);font-size:18px}
+.consent-modal .cm-accept{width:100%;margin-top:18px;min-height:44px}
+.consent-modal .cm-later{width:100%;margin-top:8px;min-height:40px}
+.cm-hint{font-size:11px;color:var(--ink-soft);text-align:center;margin-top:14px;line-height:1.5}
+.theme-opts{display:flex;gap:8px;padding:14px 16px 10px}
+.theme-opt{flex:1;border:1.5px solid var(--line);background:var(--paper);padding:10px 6px;border-radius:10px;font-size:12px;font-weight:600;cursor:pointer;color:var(--ink-soft);min-height:56px;font-family:var(--font-ui);transition:all .15s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;line-height:1}
+.theme-opt svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.theme-opt:hover{border-color:var(--green-400);color:var(--ink)}
+.theme-opt.on{background:var(--green-600);color:#fff;border-color:var(--green-700)}
+.theme-state{font-size:11px;color:var(--ink-soft);padding:2px 16px 14px;line-height:1.5}
+.inline-link{color:var(--green-600);text-decoration:underline;font-weight:600}
+.sticky-cta{position:absolute;right:14px;bottom:96px;z-index:500;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:var(--green);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;transition:background .15s}
+.sticky-cta svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:1.8}
+.sticky-cta .cta-dot{position:absolute;top:2px;right:2px;width:10px;height:10px;border-radius:50%;background:var(--gold);border:2px solid var(--green);animation:pulse 1.6s infinite}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-soft);padding:14px 22px 0;flex-wrap:wrap}
+.breadcrumb a{color:var(--green);text-decoration:none;font-weight:500}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb .sep{color:var(--line)}
+.breadcrumb [aria-current]{color:var(--ink-soft);font-weight:600}
+.info-body{padding:16px 22px 28px}
+.info-body h2{font-size:18px;font-weight:600}
+.info-body .lede{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-top:6px}
+.info-block{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-top:14px;font-size:13px;line-height:1.7;color:var(--ink)}
+.info-block h3{font-size:14px;margin-bottom:6px}
+.faq-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-top:12px}
+.faq-q{font-weight:600;font-size:14px}
+.faq-a{font-size:13px;color:var(--ink-soft);margin-top:6px;line-height:1.65}
+fieldset{border:none}
+.contact-form .field textarea{min-height:120px;resize:vertical}
+.thank-hero{text-align:center;padding:34px 22px 8px}
+.thank-hero .tk-icon{width:72px;height:72px;border-radius:50%;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:34px;margin:0 auto 14px}
+.thank-hero h2{font-size:20px}
+.thank-hero p{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.6}
+.err-404{text-align:center;padding:46px 22px}
+.err-404 .e-num{font-size:64px;font-weight:700;font-family:var(--font-head);color:var(--green);letter-spacing:2px}
+.err-404 p{font-size:13px;color:var(--ink-soft);margin-top:8px;line-height:1.6}
+.footer{margin-top:26px;background:var(--green-dark);border-radius:var(--radius-lg) var(--radius-lg) 0 0;padding:22px 22px 10px;color:rgba(255,255,255,.85);font-size:12px}
+.footer .f-links{display:flex;flex-wrap:wrap;gap:6px 14px}
+.footer .f-links a{color:#fff;text-decoration:none;font-weight:500}
+.footer .f-links a:hover{text-decoration:underline;color:var(--gold)}
+.footer .f-brand{font-family:var(--font-head);font-weight:700;font-size:14px;margin-bottom:10px}
+.footer .f-copy{margin-top:14px;border-top:1px solid rgba(255,255,255,.15);padding-top:10px;color:rgba(255,255,255,.6);font-size:11px}
+.review-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin-top:10px}
+.review-card .r-head{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.review-card .r-name{font-weight:600;font-size:13px}
+.review-card .r-place{font-size:11px;color:var(--ink-soft);font-weight:500}
+.review-card .r-text{font-size:12px;color:var(--ink-soft);line-height:1.6;margin-top:6px}
+.sheet-addr{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--ink-soft);margin-top:10px;flex-wrap:wrap}
+.sheet-addr .gmaps-link{color:var(--green);font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+.sheet-addr .gmaps-link:hover{text-decoration:underline}
+.addr-link{display:flex;align-items:center;gap:6px;color:var(--green);text-decoration:none;font-weight:600;font-size:12px;margin-top:12px;flex-wrap:wrap}
+.addr-link:hover{text-decoration:underline}
+.detail-addr{font-size:12px;color:var(--ink-soft);margin-top:10px;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="device" id="device">
+  <div class="notch"></div>
+  <div class="statusbar"><span id="clock">09:41</span><span aria-hidden="true">5G</span></div>
+  <div class="screens">
+    <section class="screen" id="screen-login" role="region" aria-label="Giriş">
+      <div class="login-wrap">
+        <div class="login-logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l3 3 3-3"/><path d="M12 6v3"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 7v6M19 7v6"/></svg></div>
+        <h1 class="login-title">Nerede Kılacağım?</h1>
+        <p class="login-tag">Cami ve mescit bul, Diyanet namaz vakitlerini öğren</p>
+        <div class="auth-card">
+          <div class="auth-tabs" role="tablist" aria-label="Giriş seçenekleri">
+            <button class="auth-tab on" id="tab-login" role="tab" aria-selected="true">Giriş Yap</button>
+            <button class="auth-tab" id="tab-reg" role="tab" aria-selected="false">Hesap Oluştur</button>
+          </div>
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="field"><label for="login-email">E-posta</label><input type="email" id="login-email" autocomplete="email" placeholder="ornek@eposta.com" required></div>
+            <div class="field"><label for="login-pass">Şifre</label><input type="password" id="login-pass" autocomplete="current-password" placeholder="••••••••" required></div>
+            <button class="btn btn-primary" style="width:100%;margin-top:18px" type="submit">Giriş Yap</button>
+          </form>
+          <form class="auth-form" id="reg-form" novalidate hidden>
+            <div class="field"><label for="reg-name">Adınız</label><input type="text" id="reg-name" autocomplete="name" placeholder="Adınız Soyadınız" required></div>
+            <div class="field"><label for="reg-email">E-posta</label><input type="email" id="reg-email" autocomplete="email" placeholder="ornek@eposta.com" required></div>
+            <div class="field"><label for="reg-pass">Şifre</label><input type="password" id="reg-pass" autocomplete="new-password" placeholder="En az 6 karakter" minlength="6" required></div>
+            <div class="field"><label for="reg-pass2">Şifre (tekrar)</label><input type="password" id="reg-pass2" autocomplete="new-password" placeholder="Şifrenizi tekrar girin" required></div>
+            <button class="btn btn-primary" style="width:100%;margin-top:18px" type="submit">Hesap Oluştur</button>
+          </form>
+          <div class="auth-divider"><span>veya</span></div>
+          <button class="google-btn" id="google-btn" type="button">
+            <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.09a6.6 6.6 0 0 1 0-4.18V7.07H2.18a11 11 0 0 0 0 9.86l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A11 11 0 0 0 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google ile devam et
+          </button>
+          <p class="google-soon">Google ile giriş yakında aktif olacak.</p>
+          <div class="auth-err" id="auth-err" role="alert"></div>
+        </div>
+        <p class="auth-hint">Uygulamayı kullanabilmek için hesap oluşturmanız zorunludur. Puanlamalarınız ve favorileriniz hesabınıza kaydedilir.</p>
+      </div>
+    </section>
+    <section class="screen harita-screen active" id="screen-map" role="region" aria-label="Harita">
+      <div id="leaflet-map" role="application" aria-label="Etrafınızdaki mescitler haritası"></div>
+      <div class="geo-banner show" id="geo-banner" role="status"><span class="dot" aria-hidden="true"></span><span id="geo-banner-text">Konumun alınıyor…</span></div>
+      <div class="vakit-pill" id="vakit-pill" tabindex="0" role="button" aria-label="Ezan vakitlerini göster">
+        <div class="vp-dot" aria-hidden="true"></div>
+        <div class="vp-text"><span class="vp-name" id="vp-name">…</span><span class="vp-time" id="vp-time">--:--</span></div>
+        <span class="vp-loc" id="vp-loc"></span>
+        <span class="vp-chevron" aria-hidden="true">›</span>
+      </div>
+      <div class="filter-bar" role="radiogroup" aria-label="Mescit filtreleri">
+        <div class="chip on" data-f="all" role="radio" aria-checked="true" tabindex="0">Tümü</div>
+        <div class="chip" data-f="abdest" role="radio" aria-checked="false" tabindex="0">Abdesthane</div>
+        <div class="chip" data-f="kadin" role="radio" aria-checked="false" tabindex="0">Kadınlar İçin</div>
+        <div class="chip" data-f="erisilebilir" role="radio" aria-checked="false" tabindex="0">Erişilebilir</div>
+      </div>
+      <div class="route-card" id="route-card" role="status" aria-live="polite">
+        <div class="rc-icon" id="rc-icon" aria-hidden="true"></div>
+        <div class="rc-body"><div class="rc-main" id="rc-main">Hesaplanıyor…</div><div class="rc-sub" id="rc-sub">Gerçek rota getiriliyor</div></div>
+        <button class="rc-close" id="rc-close" aria-label="Rotayı kapat">✕</button>
+      </div>
+      <div class="map-controls">
+        <button class="map-ctrl-btn" id="zoom-in" aria-label="Yakınlaştır">+</button>
+        <button class="map-ctrl-btn" id="zoom-out" aria-label="Uzaklaştır">−</button>
+        <button class="map-ctrl-btn recenter" id="recenter-btn" aria-label="Konumuna dön"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></button>
+      </div>
+      <div class="sheet" id="map-sheet" role="dialog" aria-label="Mescit bilgisi">
+        <div class="sheet-handle" aria-hidden="true"></div>
+        <div class="sheet-top"><div class="sheet-thumb" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 4l3 3 3-3"/><path d="M12 7v2"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 8v5M19 8v5"/></svg></div><div><div class="sheet-name" id="sheet-name">…</div><div class="sheet-meta" id="sheet-meta">…</div></div></div>
+        <div class="sheet-tags" id="sheet-tags"></div>
+        <div class="sheet-addr" id="sheet-addr"><span id="sheet-addr-text">Adres yükleniyor…</span></div>
+        <div class="mode-toggle" id="mode-toggle" role="radiogroup" aria-label="Ulaşım türü">
+          <button class="mode-btn on" data-mode="foot" role="radio" aria-checked="true">Yürüyerek</button>
+          <button class="mode-btn" data-mode="car" role="radio" aria-checked="false">Araçla</button>
+        </div>
+        <div class="sheet-actions">
+          <button class="btn btn-ghost" id="sheet-fav" aria-label="Favorilere ekle">Favorilere Ekle</button>
+          <button class="btn btn-ghost" id="sheet-directions" aria-label="Yol tarifi al">Yol Tarifi Al</button>
+          <button class="btn btn-primary" id="sheet-detail" aria-label="Detaylara git">Detaylara Git</button>
+        </div>
+      </div>
+    </section>
+    <section class="screen vakit-screen" id="screen-list" role="region" aria-label="Mescitler">
+      <div class="vakit-hero list-hero">
+        <div class="vh-label">Mescitler</div>
+        <div class="vh-vakit" style="font-size:20px">Yakındaki cami ve mescitler</div>
+        <div class="vh-sub" id="list-count">… yer bulundu</div>
+        <div class="vh-location"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><span id="list-loc-text">Konum alınıyor…</span></div>
+      </div>
+      <div class="list-filters" role="radiogroup" aria-label="Mescit filtreleri">
+        <div class="chip on" data-f="all" role="radio" aria-checked="true" tabindex="0">Tümü</div>
+        <div class="chip" data-f="abdest" role="radio" aria-checked="false" tabindex="0">Abdesthane</div>
+        <div class="chip" data-f="kadin" role="radio" aria-checked="false" tabindex="0">Kadınlar İçin</div>
+        <div class="chip" data-f="erisilebilir" role="radio" aria-checked="false" tabindex="0">Erişilebilir</div>
+      </div>
+      <div class="nearby-list" id="mosque-list" role="list"></div>
+      <div class="empty-state" id="list-empty" style="display:none"><svg viewBox="0 0 24 24"><path d="M9 4l3 3 3-3"/><path d="M12 7v2"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 8v5M19 8v5"/></svg><p>Bu filtreyle eşleşen mescit bulunamadı.</p></div>
+      <div style="height:20px"></div>
+    </section>
+    <section class="screen vakit-screen" id="screen-home" role="region" aria-label="Ezan vakitleri">
+      <div class="vakit-hero">
+        <div class="vh-label">Sıradaki vakit</div>
+        <div class="vh-vakit" id="hero-vakit-name">…</div>
+        <div class="vh-countdown" id="hero-countdown" aria-live="polite">--:--:--</div>
+        <div class="vh-sub" id="hero-sub">kaldı</div>
+        <div class="vh-location"><svg viewBox="0 0 24 24"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg><span id="location-text">Konum alınıyor…</span></div>
+      </div>
+      <div class="cta-row">
+        <button class="btn btn-primary" id="cta-map" aria-label="Haritada yakınındaki mescitleri gör">Haritayı Aç</button>
+        <button class="btn btn-ghost" id="cta-add" aria-label="Yeni mescit ekle">Mescit Ekle</button>
+      </div>
+      <div class="vakit-grid" id="vakit-grid" role="list" aria-label="Tüm vakitler"></div>
+      <div class="section-header"><h3>Yakınındaki Mescitler</h3><p>Konumunuza göre sıralanmış</p></div>
+      <div class="nearby-list" id="home-nearby-list" role="list"></div>
+      <div class="section-header" id="top-reviews-sec" style="display:none"><h3>Yeni Değerlendirmeler</h3><p>Topluluk üyelerinin son puanlamaları</p></div>
+      <div id="top-reviews" style="padding:0 22px"></div>
+      <div style="height:20px"></div>
+      <footer class="footer" id="home-footer">
+        <div class="f-brand"> Nerede Kılacağım?</div>
+        <div class="f-links">
+          <a href="#/">Anasayfa</a>
+          <a href="#/harita">Harita</a>
+          <a href="#/sss">SSS</a>
+          <a href="#/gizlilik">Gizlilik Politikası</a>
+          <a href="#/kosullar">Kullanım Şartları</a>
+          <a href="#/iletisim">İletişim</a>
+          <a href="#/hakkimizda">Hakkımızda</a>
+        </div>
+        <div class="f-copy">© <span id="f-year">2025</span> Nerede Kılacağım? · Cami ve mescit haritası, namaz vakitleri ve mescit puanlaması.</div>
+      </footer>
+    </section>
+    <section class="screen" id="screen-add" role="region" aria-label="Yeni mescit ekle">
+      <div class="add-body">
+        <h2 style="font-size:18px">Yeni Mescit Ekle</h2>
+        <p style="font-size:12px;color:var(--ink-soft);margin-top:4px">Eklediğin yer incelendikten sonra yayınlanır.</p>
+        <div class="field"><label for="place-name">Mescit adı</label><input type="text" id="place-name" placeholder="Örn. Kültür Mescidi" required aria-required="true"></div>
+        <div class="field"><label for="place-type">Tür</label><select id="place-type"><option>Cami</option><option>Mescit</option><option>AVM / Benzinlik Mescidi</option></select></div>
+        <div class="field"><label>Olanaklar</label><div class="amenity-picker" role="group" aria-label="Olanak seçimi"><div class="amenity-choice" data-choice tabindex="0" role="checkbox" aria-checked="false">Abdesthane</div><div class="amenity-choice" data-choice tabindex="0" role="checkbox" aria-checked="false">Kadınlar İçin</div><div class="amenity-choice" data-choice tabindex="0" role="checkbox" aria-checked="false">Engelli Erişimi</div><div class="amenity-choice" data-choice tabindex="0" role="checkbox" aria-checked="false">Otopark</div><div class="amenity-choice" data-choice tabindex="0" role="checkbox" aria-checked="false">Klima</div></div></div>
+        <div class="field"><label>Fotoğraf</label><div class="upload-box" id="upload-box" tabindex="0" role="button" aria-label="Fotoğraf yükle"><svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.8;margin-bottom:6px"><path d="M12 16V4m0 0L7 9m5-5l5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg><div>Fotoğraf yüklemek için dokun</div></div>
+        <input type="file" id="place-photo" accept="image/*" multiple style="display:none" aria-hidden="true">
+        <div class="photo-previews" id="photo-previews"></div></div>
+        <div class="add-loc-badge" id="add-loc">Konum bekleniyor…</div>
+        <button class="btn btn-primary" style="width:100%;margin-top:16px" id="submit-place">Kaydet</button>
+      </div>
+    </section>
+    <section class="screen" id="screen-fav" role="region" aria-label="Favoriler">
+      <div class="simple-body">
+        <h2 style="font-size:18px">Favorilerin</h2>
+        <div class="fav-list" id="fav-list"></div>
+        <div class="empty-state" id="fav-empty" style="display:none"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.5 8 2.3 4.5 5.8 4a5 5 0 0 1 6.2 2.4A5 5 0 0 1 18.2 4c3.5.5 5.3 4 3.8 7.7C19.5 16.4 12 21 12 21z"/></svg><p>Henüz favori mescidin yok.<br>Haritadan bir yer açıp "Favorilere Ekle" diyerek favorilere ekleyebilirsin.</p></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-profile" role="region" aria-label="Profil">
+      <div class="simple-body">
+        <div class="profile-head">
+          <div class="avatar" id="profile-avatar" aria-hidden="true"></div>
+          <div>
+            <div id="profile-name" style="font-weight:600;font-size:16px">…</div>
+            <div id="profile-email" style="font-size:12px;color:var(--ink-soft)">…</div>
+            <div id="profile-joined" style="font-size:12px;color:var(--ink-soft);margin-top:2px">…</div>
+          </div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div class="stat-num" id="stat-places">0</div><div class="stat-lbl">Bekleyen Yer</div></div>
+          <div class="stat-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.3 7.5 3.5 4.5 6.7 4.5c1.9 0 3.4 1 4.3 2.6l1 1.7 1-1.7c.9-1.6 2.4-2.6 4.3-2.6 3.2 0 5.4 3 4 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><div class="stat-num" id="stat-favs">0</div><div class="stat-lbl">Favori</div></div>
+          <div class="stat-card"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 17l-5.2 2.7 1-5.9-4.3-4.1 5.9-.8z"/></svg><div class="stat-num" id="stat-ratings">0</div><div class="stat-lbl">Puanlama</div></div>
+        </div>
+        <h3 style="font-size:15px;margin-top:22px">Görünüm</h3>
+        <div class="settings-group">
+          <div class="theme-opts" role="radiogroup" aria-label="Tema seçimi">
+            <button type="button" class="theme-opt" data-th="light" role="radio" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><span>Açık</span></button>
+            <button type="button" class="theme-opt" data-th="dark" role="radio" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg><span>Koyu</span></button>
+            <button type="button" class="theme-opt" data-th="system" role="radio" aria-checked="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><span>Sistem</span></button>
+          </div>
+          <div class="theme-state" id="theme-state">Şu an: sisteme uygun tema</div>
+        </div>
+        <h3 style="font-size:15px;margin-top:22px">Hesap</h3>
+        <div class="settings-group">
+          <div class="settings-item">Google ile giriş <span style="font-size:11px;color:var(--ink-soft)">Yakında</span></div>
+        </div>
+        <button class="btn btn-ghost logout-btn" id="logout-btn">Çıkış Yap</button>
+        <button class="btn btn-ghost logout-btn" id="delete-btn" style="border-color:#EF9A9A;color:#B3261E">Hesabımı Sil</button>
+      </div>
+    </section>
+    <section class="screen" id="screen-detail" role="region" aria-label="Mescit detayı">
+      <div style="position:relative">
+        <button class="back-btn" id="detail-back" aria-label="Geri dön"><svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <div class="detay-photos" id="detail-photos"></div>
+      </div>
+      <div class="detay-body">
+        <div class="detay-title" id="detail-name">…</div>
+        <div class="rating-row"><span class="rating-badge" id="detail-rating">0</span><span id="detail-reviewcount">Henüz değerlendirme yok</span></div>
+        <div class="detail-addr" id="detail-addr">Adres yükleniyor…</div>
+        <a class="addr-link" id="detail-gmaps" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=37.87,32.49">Google Haritalar'da Aç</a>
+        <div class="amenity-grid" id="detail-amenities"></div>
+        <div class="breakdown">
+          <h3 style="font-size:14px;margin-bottom:8px">Puan detayları</h3>
+          <div class="bd-row"><div class="bd-label">Temizlik</div><div class="bd-bar"><div class="bd-fill" id="bd-fill-clean" style="width:0%"></div></div><div class="bd-val" id="bd-val-clean">…</div></div>
+          <div class="bd-row"><div class="bd-label">Erişilebilirlik</div><div class="bd-bar"><div class="bd-fill" id="bd-fill-access" style="width:0%"></div></div><div class="bd-val" id="bd-val-access">…</div></div>
+          <div class="bd-row"><div class="bd-label">Abdest İmkânı</div><div class="bd-bar"><div class="bd-fill" id="bd-fill-ablution" style="width:0%"></div></div><div class="bd-val" id="bd-val-ablution">…</div></div>
+        </div>
+        <h3 style="font-size:14px;margin-top:18px">Yorumlar</h3>
+        <div id="detail-reviews"></div>
+        <div style="height:10px"></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-sss" role="region" aria-label="Sıkça sorulan sorular">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><span aria-current="page">SSS</span></nav>
+      <div class="info-body">
+        <h2>Sıkça Sorulan Sorular</h2>
+        <p class="lede">Nerede Kılacağım? hakkında en çok merak edilenler.</p>
+        <div class="faq-item"><div class="faq-q">Nerede Kılacağım? nedir?</div><p class="faq-a">Nerede Kılacağım?, bulunduğunuz konuma en yakın cami ve mescitleri gösteren, Diyanet namaz vakitlerini sunan, mescitleri puanlamanızı ve favorilere eklemenizi sağlayan bir uygulamadır.</p></div>
+        <div class="faq-item"><div class="faq-q">Namaz vakitleri nasıl belirleniyor?</div><p class="faq-a">Vakitler ülke genelinde kullanılan ezan vakitleri veri kaynaklarından (imsakiyem ve emüşaf) çekilir ve konumunuza en yakın ilçenin vakitleri gösterilir.</p></div>
+        <div class="faq-item"><div class="faq-q">Konumum nasıl kullanılıyor?</div><p class="faq-a">Konumunuz yalnızca yakınınızdaki mescitleri listelemek ve namaz vakti ilçenizi bulmak için kullanılır. Konum bilgisi sunucularımızda saklanmaz; yalnızca cihazınızda işlenir.</p></div>
+        <div class="faq-item"><div class="faq-q">Mescit nasıl ekleyebilirim veya puanlayabilirim?</div><p class="faq-a">Alt menüdeki "Mescit Ekle" butonu ile yeni mescit ekleyebilir; bir mescide yaklaştığınızda çıkan puanlama ekranını kullanarak gerçek yerinde iken puanlayabilirsiniz.</p></div>
+        <div class="faq-item"><div class="faq-q">Hesap oluşturmak zorunlu mu?</div><p class="faq-a">Evet, puanlamaların ve favorilerin hesabınıza bağlanması için giriş yapmanız gerekir. Kayıt e-posta ve şifre ile yapılır; şifreniz cihazınızda düz metin olarak değil, tuzlanmış özet (hash) olarak saklanır.</p></div>
+        <div style="margin-top:18px"><button class="btn btn-ghost" id="sss-map-btn">Haritaya Dön</button></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-gizlilik" role="region" aria-label="Gizlilik politikası">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><a href="#/sss">SSS</a><span class="sep">›</span><span aria-current="page">Gizlilik Politikası</span></nav>
+      <div class="info-body">
+        <h2>Gizlilik Politikası</h2>
+        <p class="lede">Verilerinizin nasıl işlendiğini şeffaf biçimde açıklıyoruz.</p>
+        <div class="info-block"><h3>1. Hangi veriler saklanıyor?</h3><p>Hesap bilgileriniz (ad, e-posta, şifre), mescit puanlarınız, favorileriniz ve eklediğiniz kayıtlar yalnızca tarayıcınızın yerel depolama alanında (localStorage) saklanır. Sunucularımızda hesap verisi tutulmaz.</p></div>
+        <div class="info-block"><h3>2. Konum bilgisi</h3><p>Konumunuz yalnızca yakınınızdaki mescitleri ve namaz vakitlerini bulmak için kullanılır; saklanmaz ve üçüncü kişilere aktarılmaz. İzin vermezseniz IP tabanlı yaklaşık konum ile devam edebilirsiniz.</p></div>
+        <div class="info-block"><h3>3. Üçüncü taraf hizmetleri</h3><p>Harita (OpenStreetMap), mescit verisi (Overpass API), rota (OSRM), namaz vakitleri (imsakiyem / emüşaf) ve konum tahmini (ipwho.is / ipapi.co) hizmetlerinden yararlanılır. Bu hizmetler kendi gizlilik politikalarına tabidir.</p></div>
+        <div class="info-block"><h3>4. Çerepler ve izleme</h3><p>Uygulama üçüncü taraf reklam ya da izleme çerezi kullanmaz. Verilerinizi üçüncü kişilere satmayız.</p></div>
+        <div class="info-block"><h3>5. Haklarınız</h3><p>Verilerinizi istediğiniz zaman "Hesabımı Sil" butonuyla, tarayıcı verilerinizi temizleyerek veya localStorage'ı sıfırlayarak kalıcı olarak silebilirsiniz.</p></div>
+        <div class="info-block"><h3>6. Kullanım Şartları</h3><p>Uygulamanın kullanım koşulları ayrı bir sayfada toplanmıştır. <a class="inline-link" href="#/kosullar">Kullanım Şartları'nı görüntüleyin</a>.</p></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-kosullar" role="region" aria-label="Kullanım şartları">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><a href="#/gizlilik">Gizlilik Politikası</a><span class="sep">›</span><span aria-current="page">Kullanım Şartları</span></nav>
+      <div class="info-body">
+        <h2>Kullanım Şartları</h2>
+        <p class="lede">Nerede Kılacağım? hizmetinin kullanım koşulları. Uygulamayı kullanarak bu şartları kabul etmiş sayılırsınız.</p>
+        <div class="info-block"><h3>1. Hizmet kapsamı</h3><p>Nerede Kılacağım?, çevrenizdeki cami ve mescitleri gösteren, namaz vakitlerini sunan, mescit puanlama ve favorilere ekleme imkanı veren bir uygulamadır. Hizmet; harita (OpenStreetMap), açık mescit verileri (Overpass API) ve namaz vakti sağlayıcıları üzerine kuruludur.</p></div>
+        <div class="info-block"><h3>2. Veri kaynağı</h3><p>Mescit bilgileri açık kaynaklardan (OpenStreetMap ve diğerleri) gelir; bu bilgiler hatalı veya güncel olmayabilir. Görünürlük için eklenen örnek kayıtlar "örnek" olarak işaretlenir ve kaldırılabilir. Haritayı kullanırken doğruluğu kendi sorumluluğunuzda teyit edin.</p></div>
+        <div class="info-block"><h3>3. Hesap ve içerik</h3><p>Hesap verileriniz yalnızca cihazınızın yerel depolama alanında tutulur. Mescit puanlama ve ekleme özellikleri yalnızca doğru ve iyi niyetli kullanım içindir; yanlış bilgi, sahte puanlama ve kötüye kullanım yasaktır ve hesabın kapatılmasıyla sonuçlanabilir.</p></div>
+        <div class="info-block"><h3>4. Sorumluluk</h3><p>Uygulama "olduğu gibi" sunulur. Namaz vakti, mescit konumu, adres veya yön bulma bilgilerindeki hatalardan, eksikliklerden ya da kullanımdan kaynaklanan zararlardan sorumluluk kabul edilmez.</p></div>
+        <div class="info-block"><h3>5. Fikri mülkiyet</h3><p>Uygulama adı, arayüz ve marka öğeleri Nerede Kılacağım?'e aittir. Harita ve mescit verileri açık lisanslarla korunur; kendi lisans koşullarına tabidir.</p></div>
+        <div class="info-block"><h3>6. Değişiklikler</h3><p>Bu şartlar değiştirildiğinde bu sayfa güncellenir; kullanımı sürdürdüğünüzde güncel şartları kabul etmiş sayılırsınız. Şartların bir bölümünün geçersiz sayılması diğer bölümleri etkilemez.</p></div>
+        <div class="info-block"><h3>7. İletişim</h3><p>Şartlarla ilgili sorularınız için <a class="inline-link" href="#/iletisim">iletişim sayfasını</a> kullanabilirsiniz.</p></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-iletisim" role="region" aria-label="İletişim">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><span aria-current="page">İletişim</span></nav>
+      <div class="info-body">
+        <h2>Bize Ulaşın</h2>
+        <p class="lede">Meshit ekleme, puanlama, hata bildirimi veya iş birliği için bize yazın. Genellikle 1 iş günü içinde dönüş yapıyoruz.</p>
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field"><label for="contact-name">Adınız</label><input type="text" id="contact-name" autocomplete="name" placeholder="Adınız Soyadınız" required aria-required="true"></div>
+          <div class="field"><label for="contact-email">E-posta</label><input type="email" id="contact-email" autocomplete="email" placeholder="ornek@eposta.com" required aria-required="true"></div>
+          <div class="field"><label for="contact-msg">Mesajınız</label><textarea id="contact-msg" placeholder="Mesajınızı yazın…" required aria-required="true"></textarea></div>
+          <button class="btn btn-primary" style="width:100%;margin-top:14px" type="submit">Gönder</button>
+        </form>
+      </div>
+    </section>
+    <section class="screen" id="screen-hakkimizda" role="region" aria-label="Hakkımızda">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><span aria-current="page">Hakkımızda</span></nav>
+      <div class="info-body">
+        <h2>Hakkımızda</h2>
+        <p class="lede">Nerede Kılacağım? bir topluluk girişimidir.</p>
+        <div class="info-block"><h3>Amacımız</h3><p>Şehirde, yolda veya tatilde iken en yakın cami ve mescidi kolayca bulabilmek; namaz vakitlerini tek ekrandan öğrenebilmek ve mescitlerin temizlik, erişilebilirlik ve abdest imkânı gibi özelliklerini kullanıcı puanlarıyla paylaşabilmek.</p></div>
+        <div class="info-block"><h3>Nasıl çalışıyor?</h3><p>Mescitler OpenStreetMap gibi açık veri kaynaklarından çekilir, namaz vakitleri kamuya açık ezan vakitleri servislerinden alınır. Tüm uygulama tek bir sayfadan çalışır ve verileriniz cihazınızda kalır.</p></div>
+        <div class="info-block"><h3>Topluluk &amp; Ekip</h3><p>Nerede Kılacağım? gönüllülerden oluşan küçük bir ekiple geliştirilir. Yeni fikirleriniz, geri bildirimleriniz ve hata bildirimleriniz bizim için çok değerli. Bize <a href="#/iletisim">İletişim</a> sayfasından ulaşabilirsiniz.</p></div>
+        <div style="margin-top:18px"><button class="btn btn-ghost" id="about-map-btn">Haritaya Dön</button></div>
+      </div>
+    </section>
+    <section class="screen" id="screen-tesekkur" role="region" aria-label="Teşekkürler">
+      <div class="thank-hero">
+        <div class="tk-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <h2>Teşekkürler!</h2>
+        <p id="tesekkur-msg">Mesajınız bize ulaştı. En kısa sürede dönüş yapacağız.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;justify-content:center">
+          <button class="btn btn-primary" id="thank-home-btn">Anasayfaya Dön</button>
+          <button class="btn btn-ghost" id="thank-map-btn">Haritaya Dön</button>
+        </div>
+      </div>
+    </section>
+    <section class="screen" id="screen-404" role="region" aria-label="Sayfa bulunamadı">
+      <nav class="breadcrumb" aria-label="Konum bildirimi"><a href="#/">Anasayfa</a><span class="sep">›</span><span aria-current="page">Sayfa Bulunamadı</span></nav>
+      <div class="err-404">
+        <div class="e-num">404</div>
+        <p>Aradığınız sayfayı bulamadık. Yanlış bir bağlantı kullanılmış olabilir.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;justify-content:center">
+          <button class="btn btn-primary" id="nf-home-btn">Anasayfaya Dön</button>
+          <button class="btn btn-ghost" id="nf-map-btn">Haritaya Git</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="arrival-modal" id="arrival-modal" role="dialog" aria-modal="true" aria-label="Varış puanlaması">
+    <div class="am-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l3 3 3-3"/><path d="M12 6v3"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 7v6M19 7v6"/></svg></div>
+    <h2 id="am-title">Varış!</h2>
+    <p id="am-desc">Mescide ulaştınız. Deneyiminizi puanlayarak devam edebilirsiniz.</p>
+    <div class="am-stars" id="am-stars" role="radiogroup" aria-label="Puan seçimi">
+      <button class="am-star" data-star="1" role="radio" aria-checked="false" aria-label="1 yıldız">★</button>
+      <button class="am-star" data-star="2" role="radio" aria-checked="false" aria-label="2 yıldız">★</button>
+      <button class="am-star" data-star="3" role="radio" aria-checked="false" aria-label="3 yıldız">★</button>
+      <button class="am-star" data-star="4" role="radio" aria-checked="false" aria-label="4 yıldız">★</button>
+      <button class="am-star" data-star="5" role="radio" aria-checked="false" aria-label="5 yıldız">★</button>
+    </div>
+    <div class="am-categories" id="am-categories">
+      <div class="am-cat" data-cat="cleanliness"><span class="am-cat-label">Temizlik</span><div class="am-cat-vals"><span class="am-cat-val" data-val="1" tabindex="0" role="radio" aria-checked="false" aria-label="Temizlik 1">1</span><span class="am-cat-val" data-val="2" tabindex="0" role="radio" aria-checked="false" aria-label="Temizlik 2">2</span><span class="am-cat-val" data-val="3" tabindex="0" role="radio" aria-checked="false" aria-label="Temizlik 3">3</span><span class="am-cat-val" data-val="4" tabindex="0" role="radio" aria-checked="false" aria-label="Temizlik 4">4</span><span class="am-cat-val" data-val="5" tabindex="0" role="radio" aria-checked="false" aria-label="Temizlik 5">5</span></div></div>
+      <div class="am-cat" data-cat="accessibility"><span class="am-cat-label">Erişilebilirlik</span><div class="am-cat-vals"><span class="am-cat-val" data-val="1" tabindex="0" role="radio" aria-checked="false" aria-label="Erişilebilirlik 1">1</span><span class="am-cat-val" data-val="2" tabindex="0" role="radio" aria-checked="false" aria-label="Erişilebilirlik 2">2</span><span class="am-cat-val" data-val="3" tabindex="0" role="radio" aria-checked="false" aria-label="Erişilebilirlik 3">3</span><span class="am-cat-val" data-val="4" tabindex="0" role="radio" aria-checked="false" aria-label="Erişilebilirlik 4">4</span><span class="am-cat-val" data-val="5" tabindex="0" role="radio" aria-checked="false" aria-label="Erişilebilirlik 5">5</span></div></div>
+      <div class="am-cat" data-cat="ablution"><span class="am-cat-label">Abdest İmkânı</span><div class="am-cat-vals"><span class="am-cat-val" data-val="1" tabindex="0" role="radio" aria-checked="false" aria-label="Abdest imkanı 1">1</span><span class="am-cat-val" data-val="2" tabindex="0" role="radio" aria-checked="false" aria-label="Abdest imkanı 2">2</span><span class="am-cat-val" data-val="3" tabindex="0" role="radio" aria-checked="false" aria-label="Abdest imkanı 3">3</span><span class="am-cat-val" data-val="4" tabindex="0" role="radio" aria-checked="false" aria-label="Abdest imkanı 4">4</span><span class="am-cat-val" data-val="5" tabindex="0" role="radio" aria-checked="false" aria-label="Abdest imkanı 5">5</span></div></div>
+    </div>
+    <textarea class="am-comment" id="am-comment" placeholder="Yorumunuz (isteğe bağlı)" aria-label="Yorum yaz"></textarea>
+    <button class="am-submit" id="am-submit" disabled aria-label="Puanı gönder">Puanı Gönder</button>
+    <button class="am-skip" id="am-skip" aria-label="Sonra puanla">Sonra Puanla</button>
+    <div class="am-hint" id="am-hint">Puanlamadan geçebilmek için "Sonra Puanla" kullanılabilir.</div>
+  </div>
+  <div class="toast" id="toast" role="alert" aria-live="assertive"></div>
+  <div class="consent-modal" id="consent-modal" role="dialog" aria-modal="true" aria-label="Gizlilik ve kullanım şartları">
+    <div class="cm-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+    <h2>Hoş geldiniz</h2>
+    <p class="cm-lede">Nerede Kılacağım?, en yakın cami ve mescitleri bulmanıza yardımcı olur. Devam etmeden önce gizlilik ve kullanım şartlarımızı incelemenizi rica ederiz.</p>
+    <div class="cm-links">
+      <a href="#/gizlilik">Gizlilik Politikası</a>
+      <a href="#/kosullar">Kullanım Şartları</a>
+    </div>
+    <p class="cm-note">Kabul ederek konum verilerinin yalnızca yakındaki mescitleri ve namaz vakitlerini bulmak için kullanılacağını, hesap verilerinin cihazınızda saklanacağını ve mescit bilgilerinin açık kaynaklardan geldiğini onaylamış olursunuz.</p>
+    <button class="btn btn-primary cm-accept" id="consent-accept">Kabul Ediyorum</button>
+    <button class="btn btn-ghost cm-later" id="consent-later">Şimdi Değil</button>
+    <p class="cm-hint">"Şimdi Değil" seçerseniz bir sonraki açılışta yeniden gösterilir.</p>
+  </div>
+  <button class="sticky-cta" id="sticky-cta" aria-label="Bize ulaşın, iletişim sayfasını aç" title="Bize Ulaşın"><span class="cta-dot" aria-hidden="true"></span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg></button>
+  <div class="navbar" role="navigation" aria-label="Ana menü">
+    <button class="navbtn active" data-screen="map" aria-label="Harita"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/></svg><span>Harita</span></button>
+    <button class="navbtn" data-screen="home" aria-label="Ezan vakitleri"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg><span>Vakitler</span></button>
+    <button class="navbtn" data-screen="list" aria-label="Mescitler"><svg viewBox="0 0 24 24"><path d="M9 4l3 3 3-3"/><path d="M12 7v2"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 8v5M19 8v5"/></svg><span>Mescitler</span></button>
+    <button class="navbtn" data-screen="add" aria-label="Mescit ekle"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Mescit Ekle</span></button>
+    <button class="navbtn" data-screen="fav" aria-label="Favoriler"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.5 8 2.3 4.5 5.8 4a5 5 0 0 1 6.2 2.4A5 5 0 0 1 18.2 4c3.5.5 5.3 4 3.8 7.7C19.5 16.4 12 21 12 21z"/></svg><span>Favoriler</span></button>
+    <button class="navbtn" data-screen="profile" aria-label="Profil"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5"/></svg><span>Profil</span></button>
+  </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>(function(){
+"use strict";
+function pad(n){return String(Math.floor(n)).padStart(2,"0")}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;")}
+function starText(r){return "\u2605".repeat(Math.round(r))}
+function deg2rad(d){return d*Math.PI/180}
+function haversine(a,b,c,d){
+  var dLng=d-b;if(dLng>180)dLng-=360;if(dLng<-180)dLng+=360;
+  var R=6371e3,dA=deg2rad(c-a),dB=deg2rad(dLng);
+  var x=Math.sin(dA/2)*Math.sin(dA/2)+Math.cos(deg2rad(a))*Math.cos(deg2rad(c))*Math.sin(dB/2)*Math.sin(dB/2);
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+function $(id){return document.getElementById(id)}
+var THUMB='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4l3 3 3-3"/><path d="M12 7v2"/><path d="M7 12v7a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-7"/><path d="M5 8v5M19 8v5"/></svg>';
+function distText(d){return d>=1000?(d/1000).toFixed(1)+"km":Math.round(d)+"m"}
+function isoDate(){var n=new Date(),dd=pad(n.getDate()),mm=pad(n.getMonth()+1);return n.getFullYear()+"-"+mm+"-"+dd}
+function loadJSON(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function saveJSON(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function normalize(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toUpperCase().replace(/[^A-Z0-9]+/g,"")}
+function capTr(s){return String(s||"").toLocaleLowerCase("tr").split(/\s+/).filter(Boolean).map(function(w){return w.charAt(0).toLocaleUpperCase("tr")+w.slice(1)}).join(" ")}
+function trDative(name){
+  var s=String(name||"").trim();
+  var v=s.match(/[ae\u0131io\u00F6u\u00FC]/gi);
+  if(!v)return"'e";
+  var last=v[v.length-1].toLocaleLowerCase("tr");
+  var aOrE=("a\u0131ou".indexOf(last)>-1)?"a":"e";
+  var lc=s.toLocaleLowerCase("tr").charAt(s.length-1);
+  var isVowel=["a","e","\u0131","i","o","\u00F6","u","\u00FC"].indexOf(lc)>-1;
+  return isVowel?"'y"+aOrE:"'"+aOrE;
+}
+
+var DEFAULT_LAT=37.87,DEFAULT_LNG=32.49;
+var userLat=DEFAULT_LAT,userLng=DEFAULT_LNG,ipCity="";
+var lastFetchDate="",lastFetchLoc="";
+var vakitler=[{name:"\u0130msak",time:"--:--"},{name:"G\u00FCne\u015F",time:"--:--"},{name:"\u00D6\u011Fle",time:"--:--"},{name:"\u0130kindi",time:"--:--"},{name:"Ak\u015Fam",time:"--:--"},{name:"Yats\u0131",time:"--:--"}];
+
+function toVakitler(o){
+  return[
+    {name:"\u0130msak",time:String(o.Imsak||"--:--")},
+    {name:"G\u00FCne\u015F",time:String(o.Gunes||"--:--")},
+    {name:"\u00D6\u011Fle",time:String(o.Ogle||"--:--")},
+    {name:"\u0130kindi",time:String(o.Ikindi||"--:--")},
+    {name:"Ak\u015Fam",time:String(o.Aksam||"--:--")},
+    {name:"Yats\u0131",time:String(o.Yatsi||"--:--")}
+  ];
+}
+function parseMiladi(s){
+  if(!s)return null;
+  if(/^\d{4}-\d{2}-\d{2}/.test(s)){var p=s.slice(0,10).split("-");return new Date(+p[0],+p[1]-1,+p[2]);}
+  var m=/^(\d{1,2})\.(\d{1,2})\.(\d{4})/.exec(String(s));
+  if(m)return new Date(+m[3],+m[2]-1,+m[1]);
+  return null;
+}
+function fetchRetry(url,opts){
+  return new Promise(function(res,rej){
+    function attempt(n){
+      fetch(url,opts).then(function(r){
+        if(r.ok||(r.status!==429&&r.status<500)||n>=2)res(r);
+        else setTimeout(function(){attempt(n+1)},700);
+      }).catch(function(err){
+        if(n>=2)rej(err);else setTimeout(function(){attempt(n+1)},700);
+      });
+    }
+    attempt(0);
+  });
+}
+function imsakiyem(path){
+  return fetchRetry("https://ezanvakti.imsakiyem.com/api/locations/"+path)
+    .then(function(r){if(!r.ok)throw new Error("imsakiyem "+path+" "+r.status);return r.json()})
+    .then(function(d){if(!(d&&d.success&&Array.isArray(d.data)))throw new Error("imsakiyem bad shape "+path);return d.data;});
+}
+function imsakiyemTimes(districtId){
+  return fetchRetry("https://ezanvakti.imsakiyem.com/api/prayer-times/"+districtId+"/daily")
+    .then(function(r){if(!r.ok)throw new Error("imsakiyemTimes "+r.status);return r.json()})
+    .then(function(d){
+      if(!(d&&d.success&&d.data&&d.data[0]))throw new Error("imsakiyemTimes bad");
+      var t=d.data[0].times||{};
+      return toVakitler({Imsak:t.imsak,Gunes:t.gunes,Ogle:t.ogle,Ikindi:t.ikindi,Aksam:t.aksam,Yatsi:t.yatsi});
+    });
+}
+function emushaf(path){
+  return fetchRetry("https://ezanvakti.emushaf.net/"+path)
+    .then(function(r){if(!r.ok)throw new Error("emushaf "+path+" "+r.status);return r.json()})
+    .then(function(json){if(!Array.isArray(json))throw new Error("emushaf bad shape "+path);return json;});
+}
+function emushafTimes(districtId){
+  return emushaf("vakitler/"+districtId).then(function(list){
+    if(!list.length)throw new Error("emushaf no data");
+    var now=new Date(),nowT=now.getTime();
+    var best=null,bestDiff=Infinity;
+    for(var i=0;i<list.length;i++){
+      var dt=parseMiladi(list[i].MiladiTarihKisaIso8601||list[i].MiladiTarihKisa)||new Date(list[i].MiladiTarihKisaUzunIso8601||0);
+      var diff=Math.abs((dt.getTime()||Infinity)-nowT);
+      if(diff<bestDiff){bestDiff=diff;best=list[i];}
+    }
+    if(!best)throw new Error("emushaf no row");
+    return toVakitler({Imsak:best.Imsak,Gunes:best.Gunes,Ogle:best.Ogle,Ikindi:best.Ikindi,Aksam:best.Aksam,Yatsi:best.Yatsi});
+  });
+}
+function fetchDiyanetTimes(districtId){
+  return imsakiyemTimes(districtId).catch(function(){return emushafTimes(districtId)});
+}
+function itemId(it){return it.IlceID!==undefined?it.IlceID:(it.SehirID!==undefined?it.SehirID:it._id)}
+function itemName(it){return it.IlceAdi!==undefined?it.IlceAdi:(it.SehirAdi!==undefined?it.SehirAdi:it.name)}
+function itemNameEn(it){return it.IlceAdiEn!==undefined?it.IlceAdiEn:(it.SehirAdiEn!==undefined?it.SehirAdiEn:it.name_en)}
+function overpassQuery(q){
+  return fetch("https://overpass-api.de/api/interpreter",{method:"POST",body:"data="+encodeURIComponent(q)})
+    .then(function(r){if(!r.ok)throw new Error("overpass "+r.status);return r.json()})
+    .catch(function(){
+      return fetch("https://overpass.kumi.systems/api/interpreter",{method:"POST",body:"data="+encodeURIComponent(q)})
+        .then(function(r){if(!r.ok)throw new Error("overpassk "+r.status);return r.json()});
+    });
+}
+function adminByOverpass(lat,lng){
+  var q='[out:json][timeout:25];(relation["boundary"="administrative"]["admin_level"~"^(6|8)$"](around:'+lat+','+lng+',5);way["boundary"="administrative"]["admin_level"~"^(6|8)$"](around:'+lat+','+lng+',5););out center tags;';
+  return overpassQuery(q).then(function(d){
+    var district="",province="";
+    (d.elements||[]).forEach(function(e){
+      var t=e.tags||{},lvl=t.admin_level;
+      if(lvl==="8"&&!district&&t.name)district=t.name;
+      if(lvl==="6"&&!province&&t.name)province=t.name;
+    });
+    if(!province)throw new Error("no admin");
+    return{province:province,district:district,countryCode:normalize(province)==="TURKIYE"||normalize(province)==="KUZEY KIBRIS"?"tr":""};
+  });
+}
+function addrByPhoton(lat,lng){
+  return fetch("https://photon.komoot.io/reverse?lon="+lng+"&lat="+lat+"&lang=tr")
+    .then(function(r){if(!r.ok)throw new Error("photon "+r.status);return r.json()})
+    .then(function(d){
+      var pr=d&&d.features&&d.features[0]&&d.features[0].properties||{};
+      if(!pr.state&&!pr.city)throw new Error("photon empty");
+      return{province:pr.state||pr.city,district:pr.district||pr.county||pr.city,country:pr.country};
+    });
+}
+function addrByNominatim(lat,lng){
+  return fetch("https://nominatim.openstreetmap.org/reverse?format=jsonv2&addressdetails=1&accept-language=tr&lat="+lat+"&lon="+lng)
+    .then(function(r){if(!r.ok)throw new Error("nominatim "+r.status);return r.json()})
+    .then(function(ad){
+      var a=ad.address||{};
+      if(!a.state&&!a.city&&!a.town)throw new Error("nominatim empty");
+      return{province:a.state||a.province||a.city,district:a.town||a.county||a.city||a.municipality||a.village,country:a.country,countryCode:a.country_code};
+    });
+}
+function resolveAddr(lat,lng){
+  return adminByOverpass(lat,lng).catch(function(){return addrByPhoton(lat,lng)}).catch(function(){return addrByNominatim(lat,lng)});
+}
+function countryIdOf(addr){
+  var cc=addr.countryCode||"";
+  if(cc==="tr")return 2;
+  var nn=normalize(addr.country||"");
+  if(nn==="TURKIYE"||nn==="TURKEY"||nn==="TURKCE")return 2;
+  if(cc)return 0;
+  if(addr.trLikely)return 2;
+  return 0;
+}
+function resolveDistrict(lat,lng){
+  var cached=loadJSON("nc_district",null);
+  if(cached&&cached.districtId&&Date.now()-cached.ts<2*3600*1000&&Math.abs(cached.lat-lat)<0.2&&Math.abs(cached.lng-lng)<0.2){
+    return Promise.resolve(cached);
+  }
+  return resolveAddr(lat,lng)
+    .then(function(addr){return pickupDistrict(addr,lat,lng)})
+    .catch(function(){
+      if(ipCity)return resolveDistrictByCity(ipCity,lat,lng);
+      throw new Error("district resolution failed");
+    });
+}
+function districtViaTr(lat,lng,candN,stateN,allowM){
+  var cons=[
+    {name:"imsakiyem",provinces:function(){return imsakiyem("states?countryId=2")},districts:function(sid){return imsakiyem("districts?stateId="+sid)}},
+    {name:"emushaf",provinces:function(){return emushaf("sehirler/2")},districts:function(sid){return emushaf("ilceler/"+sid)}}
+  ];
+  var i=0;
+  function next(){
+    if(i>=cons.length)return Promise.reject(new Error("tr district failed"));
+    var p=cons[i++];
+    return p.provinces().then(function(ps){
+      var sid=null;
+      for(var k=0;k<ps.length;k++){
+        if(normalize(itemName(ps[k]))===stateN||normalize(itemNameEn(ps[k]))===stateN){sid=itemId(ps[k]);break;}
+      }
+      if(sid==null)throw new Error("province not matched");
+      return p.districts(sid);
+    }).then(function(ds){
+      var d=findDistrict(ds,candN);
+      if(!d&&allowM){for(var m=0;m<ds.length;m++){if(/merkez/i.test(itemName(ds[m]))){d=ds[m];break;}}}
+      if(!d&&allowM)d=ds[0];
+      if(!d)throw new Error("district not matched");
+      var info={districtId:itemId(d),districtName:capTr(itemName(d)),lat:lat,lng:lng,ts:Date.now()};
+      saveJSON("nc_district",info);
+      return info;
+    }).catch(next);
+  }
+  return next();
+}
+function pickupDistrict(addr,lat,lng){
+  var candN=[normalize(addr.district),normalize(addr.province)].filter(Boolean);
+  var stateN=normalize(addr.province||addr.district||"");
+  if(countryIdOf(addr)===2){
+    return districtViaTr(lat,lng,candN,stateN,false);
+  }
+  return districtViaTr(lat,lng,candN,stateN,false)
+    .catch(function(){return pickupForeignDistrict(addr,lat,lng,candN,stateN)});
+}
+function pickupForeignDistrict(addr,lat,lng,candN,stateN){
+  return emushaf("ulkeler").then(function(list){
+    var nn=normalize(addr.country||"");
+    for(var i=0;i<list.length;i++){
+      if(normalize(list[i].UlkeAdiEn)===nn||normalize(list[i].UlkeAdi)===nn)return list[i].UlkeID;
+    }
+    throw new Error("country not matched");
+  }).then(function(cid){
+    return emushaf("sehirler/"+cid).then(function(cities){
+      var sid=null;
+      for(var i=0;i<cities.length;i++){
+        if(normalize(cities[i].SehirAdi)===stateN||normalize(cities[i].SehirAdiEn)===stateN){sid=cities[i].SehirID;break;}
+      }
+      if(sid==null)throw new Error("city not matched");
+      return sid;
+    });
+  }).then(function(sid){
+    return emushaf("ilceler/"+sid).then(function(districts){
+      var dObj=findDistrict(districts,candN);
+      if(!dObj)throw new Error("district not matched");
+      var info={districtId:dObj.IlceID,districtName:dObj.IlceAdi,lat:lat,lng:lng,ts:Date.now()};
+      saveJSON("nc_district",info);
+      return info;
+    });
+  });
+}
+function resolveDistrictByCity(city,lat,lng){
+  if(!normalize(city))throw new Error("no city");
+  return districtViaTr(lat,lng,[normalize(city)],normalize(city),true);
+}
+function findDistrict(districts,candN){
+  var d=null;
+  for(var i=0;i<districts.length;i++){
+    var n=normalize(itemName(districts[i])),ne=normalize(itemNameEn(districts[i]));
+    for(var j=0;j<candN.length;j++){
+      if(candN[j]&&(n===candN[j]||ne===candN[j])){d=districts[i];break;}
+    }
+    if(d)break;
+  }
+  if(!d){
+    for(var k=0;k<candN.length;k++){
+      if(candN[k]&&candN[k].length>=4){
+        for(var m=0;m<districts.length;m++){
+          var nn=normalize(itemName(districts[m]));
+          if(nn.indexOf(candN[k])>-1||candN[k].indexOf(nn)>-1){d=districts[m];break;}
+        }
+      }
+      if(d)break;
+    }
+  }
+  return d;
+}
+function fetchPrayerTimes(lat,lng){
+  var today=isoDate();
+  if(today===lastFetchDate&&lastFetchLoc===lat+","+lng)return;
+  lastFetchDate=today;lastFetchLoc=lat+","+lng;
+  resolveDistrict(lat,lng)
+    .then(function(info){
+      $("location-text").textContent=capTr(info.districtName);
+      return fetchDiyanetTimes(info.districtId);
+    })
+    .then(function(times){
+      vakitler=times;
+    })
+    .catch(function(){vakitler=[{name:"\u0130msak",time:"--:--"},{name:"G\u00FCne\u015F",time:"--:--"},{name:"\u00D6\u011Fle",time:"--:--"},{name:"\u0130kindi",time:"--:--"},{name:"Ak\u015Fam",time:"--:--"},{name:"Yats\u0131",time:"--:--"}]})
+    .then(function(){renderVakitGrid();updateCountdown()});
+}
+function parseTime(s){
+  if(!s||s==="--:--")return null;
+  var p=String(s).split(":");if(p.length<2)return null;
+  var h=parseInt(p[0],10),m=parseInt(p[1],10);
+  if(isNaN(h)||isNaN(m))return null;
+  return{h:h,m:m};
+}
+function renderVakitGrid(){
+  var g=$("vakit-grid"),n=new Date(),nm=n.getHours()*60+n.getMinutes(),ci=0;
+  for(var i=0;i<vakitler.length;i++){var v=parseTime(vakitler[i].time);if(v&&v.h*60+v.m>nm){ci=i;break;}}
+  g.innerHTML=vakitler.map(function(v,i){return'<div class="vakit-card'+(i===ci?" current":"")+'" role="listitem"><div class="vk-name">'+esc(v.name)+'</div><div class="vk-time">'+esc(v.time)+'</div></div>'}).join("");
+}
+function updateCountdown(){
+  var n=new Date();$("clock").textContent=pad(n.getHours())+":"+pad(n.getMinutes());
+  var ns=n.getHours()*3600+n.getMinutes()*60+n.getSeconds(),next=null;
+  for(var i=0;i<vakitler.length;i++){var v=parseTime(vakitler[i].time);if(!v)continue;if(v.h*3600+v.m*60>=ns){next=vakitler[i];break;}}
+  var diff;
+  if(!next){next=vakitler[0];var nt=parseTime(next.time);diff=(86400-ns)+(nt?nt.h*3600+nt.m*60:0);$("hero-sub").textContent="yar\u0131n i\u00E7in kald\u0131";}
+  else{var t=parseTime(next.time);diff=t?t.h*3600+t.m*60-ns:0;$("hero-sub").textContent="kald\u0131";}
+  diff=Math.max(0,isNaN(diff)?0:diff);if(diff>86399)diff=86399;
+  var h=Math.floor(diff/3600),m=Math.floor((diff%3600)/60),s=Math.floor(diff%60),str=pad(h)+":"+pad(m)+":"+pad(s);
+  $("hero-countdown").textContent=str;$("hero-vakit-name").textContent=next.name;
+  var vp=$("vp-name"),vt=$("vp-time");if(vp){vp.textContent=next.name;vt.textContent=next.time;}
+}
+
+var DACCOUNTS_KEY="nc_users",SESSION_KEY="nc_session",DB_KEY="nc_data";
+function fnv1a(str){var h=0x811c9dc5;for(var i=0;i<str.length;i++){h^=str.charCodeAt(i);h=(h*0x01000193)>>>0}return h.toString(16)}
+function hashPW(pass,salt){return fnv1a(salt+":"+pass+":"+salt)}
+function getUsers(){return loadJSON(DACCOUNTS_KEY,{})}
+function saveUsers(users){saveJSON(DACCOUNTS_KEY,users)}
+function getSession(){return localStorage.getItem(SESSION_KEY)||""}
+function setSession(e){localStorage.setItem(SESSION_KEY,e)}
+function clearSession(){localStorage.removeItem(SESSION_KEY)}
+function currentUser(){var e=getSession(),us=getUsers();return e&&us[e]?us[e]:null}
+function userKey(){return "u"+fnv1a(getSession()||"anon")}
+function getDB(){return loadJSON(DB_KEY,{agg:{},photos:[]})}
+function saveDB(db){saveJSON(DB_KEY,db)}
+function aggFor(key){var db=getDB();return db.agg[key]||null}
+function placeRating(key){var a=aggFor(key);if(!a||!a.count)return null;return{avg:a.sum/a.count,count:a.count}}
+function getFavs(){return loadJSON(userKey()+"_favs",[])}
+function saveFavs(f){saveJSON(userKey()+"_favs",f)}
+function getPending(){return loadJSON(userKey()+"_pending",[])}
+function savePending(p){saveJSON(userKey()+"_pending",p)}
+function recomputeAgg(db,k){
+  var a=db.agg[k];if(!a)return;
+  var rs=(a.reviews||[]).filter(function(r){return r&&r.star>0});
+  if(!rs.length){delete db.agg[k];return;}
+  var sum=0,count=0;
+  var cats={cleanliness:{n:0,sum:0},accessibility:{n:0,sum:0},ablution:{n:0,sum:0}};
+  rs.forEach(function(r){sum+=r.star;count++;["cleanliness","accessibility","ablution"].forEach(function(c){var v=Number(r[c])||0;if(v>0){cats[c].n++;cats[c].sum+=v}})});
+  a.reviews=rs;a.sum=sum;a.count=count;a.cats=cats;
+}
+function saveArrivalRating(p,star,catScores,comment){
+  var u=currentUser();if(!u)return;
+  var db=getDB();
+  var key=p.key;
+  var a=db.agg[key]=db.agg[key]||{count:0,sum:0,cats:{cleanliness:{n:0,sum:0},accessibility:{n:0,sum:0},ablution:{n:0,sum:0}},reviews:[]};
+  a.reviews=a.reviews.filter(function(r){return r.email!==u.email});
+  a.reviews.push({email:u.email,name:u.name,star:star,cleanliness:catScores.cleanliness,accessibility:catScores.accessibility,ablution:catScores.ablution,comment:comment||"",ts:Date.now()});
+  recomputeAgg(db,key);
+  saveDB(db);
+  renderNearbyList();
+  renderTopReviews();
+  if(curSP&&curSP.key===p.key)updateSheetMeta(curSP);
+}
+
+var map=null;
+function showScreen(id){
+  if(!currentUser()&&id!=="login")id="login";
+  if(id!=="map"){
+    if($("map-sheet"))$("map-sheet").classList.remove("show");
+    if(routeActive)clearRoute();
+  }
+  document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active")});
+  var el=$("screen-"+id);
+  if(el)el.classList.add("active");
+  document.querySelectorAll(".navbtn").forEach(function(b){b.classList.remove("active")});
+  var btn=document.querySelector('.navbtn[data-screen="'+id+'"]');
+  if(btn)btn.classList.add("active");
+  if(id==="map"&&map){requestAnimationFrame(function(){requestAnimationFrame(function(){map.invalidateSize()})})}
+  setDocMeta(id);updateSticky(id);
+}
+var META={
+  login:{title:"Giriş Yap | Nerede Kılacağım?",desc:"Nerede Kılacağım? hesabınıza giriş yapın; favorilerinizi ve puanlarınızı koruyun."},
+  map:{title:"Yakınındaki Camiler ve Mescitler | Nerede Kılacağım?",desc:"Bulunduğunuz yere en yakın cami ve mescitleri bulun, yol tarifi alın ve puanlarını görün."},
+  home:{title:"Namaz Vakitleri – Ezan Saatleri | Nerede Kılacağım?",desc:"Diyanet verileriyle bugünün namaz vakitleri, ezan geri sayımı ve yakınınızdaki mescitler tek ekranda."},
+  list:{title:"Mescitler | Nerede Kılacağım?",desc:"Yakınınızdaki cami ve mescitlerin filtrelenebilir listesi, konumunuza göre sıralanır."},
+  add:{title:"Mescit Ekle | Nerede Kılacağım?",desc:"Bilmediğimiz bir cami veya mescidi topluluğa kazandırın. Fotoğraf ve olanak bilgisiyle ekleyin."},
+  fav:{title:"Favorilerim | Nerede Kılacağım?",desc:"Kaydettiğiniz cami ve mescitlere hızlıca göz atın."},
+  profile:{title:"Profilim | Nerede Kılacağım?",desc:"Hesap bilgilerinizi, istatistiklerinizi, görünüm ve ayarlarınızı yönetin."},
+  detail:{title:"Mescit Detayı | Nerede Kılacağım?",desc:"Mescidin puanları, yorumları, fotoğrafları ve adresi."},
+  sss:{title:"Sıkça Sorulan Sorular | Nerede Kılacağım?",desc:"Nerede Kılacağım? hakkında merak edilenler: konum, namaz vakitleri, mescit ekleme ve puanlama."},
+  gizlilik:{title:"Gizlilik Politikası | Nerede Kılacağım?",desc:"Nerede Kılacağım? gizlilik politikası: verileriniz nasıl saklanır, nasıl silinir, üçüncü taraf hizmetler."},
+  kosullar:{title:"Kullanım Şartları | Nerede Kılacağım?",desc:"Nerede Kılacağım? kullanım şartları: hizmet kapsamı, veri kaynakları, sorumluluk ve değişiklikler."},
+  iletisim:{title:"İletişim | Nerede Kılacağım?",desc:"Mescit ekleme, hata bildirimi ve iş birliği için Nerede Kılacağım? ekibiyle iletişime geçin."},
+  hakkimizda:{title:"Hakkımızda | Nerede Kılacağım?",desc:"Nerede Kılacağım? topluluk girişiminin amacı ve nasıl çalıştığı hakkında bilgi."},
+  tesekkur:{title:"Teşekkürler | Nerede Kılacağım?",desc:"Mesajınız bize ulaştı. Teşekkürler!"},
+  "404":{title:"Sayfa Bulunamadı | Nerede Kılacağım?",desc:"Aradığınız sayfa bulunamadı. Anasayfaya dönün."}
+};
+function setDocMeta(id){
+  var m=META[id]||META.map;
+  if(id==="login"){m=META.login;}
+  document.title=m.title;
+  var d=document.querySelector('meta[name="description"]');
+  if(d)d.setAttribute("content",m.desc);
+  var ogt=document.querySelector('meta[property="og:title"]');
+  if(ogt)ogt.setAttribute("content",m.title);
+  var ogd=document.querySelector('meta[property="og:description"]');
+  if(ogd)ogd.setAttribute("content",m.desc);
+}
+function updateSticky(id){
+  var s=$("sticky-cta");
+  if(s)s.style.display=(!currentUser())? "none":((id==="map"||id==="home"||id==="detail")?"flex":"none");
+}
+var STATIC_INFOS={sss:1,gizlilik:1,kosullar:1,iletisim:1,hakkimizda:1,tesekkur:1,"404":1};
+function openInfo(id){
+  if(!currentUser()&&!STATIC_INFOS[id]){showScreen("login");return;}
+  if(id!=="map"){
+    if($("map-sheet"))$("map-sheet").classList.remove("show");
+    if(routeActive)clearRoute();
+  }
+  document.querySelectorAll(".screen").forEach(function(s){s.classList.remove("active")});
+  var el=$("screen-"+id);
+  if(!el){openInfo("404");return;}
+  el.classList.add("active");
+  document.querySelectorAll(".navbtn").forEach(function(b){b.classList.remove("active")});
+  setDocMeta(id);updateSticky(id);
+  requestAnimationFrame(function(){el.scrollTop=0});
+}
+var STATIC_IDS={sss:1,gizlilik:1,kosullar:1,iletisim:1,hakkimizda:1,tesekkur:1,"404":1,map:1,home:1,list:1};
+function routeFromHash(){
+  var h=location.hash||"";
+  if(!h||h==="#"||h==="#/"){showScreen("map");return;}
+  if(h==="#/harita"){showScreen("map");return;}
+  if(h==="#/vakitler"||h==="#/vakit"){showScreen("home");return;}
+  var m=/^#\/([a-z0-9-]+)/.exec(h);
+  if(m&&STATIC_IDS[m[1]]){if(m[1]==="map"||m[1]==="home")showScreen(m[1]);else openInfo(m[1]);return;}
+  openInfo("404");
+}
+window.addEventListener("hashchange",routeFromHash);
+function gmapsUrl(lat,lng){return "https://www.google.com/maps/search/?api=1&query="+Number(lat).toFixed(6)+","+Number(lng).toFixed(6)}
+function fillSheetAddr(p){
+  var el=$("sheet-addr");if(!el)return;
+  el.innerHTML='<span id="sheet-addr-text">Adres yükleniyor…</span> <a class="gmaps-link" href="'+gmapsUrl(p.lat,p.lon)+'" target="_blank" rel="noopener">Google Haritalar\u0027da Aç</a>';
+  resolveAddr(p.lat,p.lon).then(function(a){
+    var parts=[];
+    if(a.district)parts.push(a.district);
+    if(a.province&&parts.indexOf(a.province)===-1)parts.push(a.province);
+    if(a.country)parts.push(a.country);
+    var t=$("sheet-addr-text");
+    if(t&&parts.length)t.textContent=parts.join(", ");
+  }).catch(function(){});
+}
+function renderTopReviews(){
+  var el=$("top-reviews"),sec=$("top-reviews-sec");
+  if(!el||!sec)return;
+  var db=getDB(),rs=[];
+  Object.keys(db.agg||{}).forEach(function(k){
+    var a=db.agg[k];
+    (a.reviews||[]).forEach(function(r){
+      if(!r||!r.comment)return;
+      var nm="";
+      for(var i=0;i<places.length;i++){if(places[i].key===k){nm=places[i].name;break;}}
+      rs.push({name:nm||a.name||k,user:r.name,star:r.star||a.avg||5,comment:r.comment,ts:r.ts||0});
+    });
+  });
+  rs.sort(function(x,y){return y.ts-x.ts});
+  var top=rs.slice(0,3);
+  if(!top.length){sec.style.display="none";el.innerHTML="";return;}
+  sec.style.display="block";
+  el.innerHTML=top.map(function(r){return'<div class="review-card" aria-label="Kullanıcı yorumu"><div class="r-head"><div><div class="r-name">'+esc(r.user)+'</div><div class="r-place">'+esc(r.name)+'</div></div><div class="star" aria-hidden="true">'+starText(r.star||5)+'</div></div><div class="r-text">“'+esc(r.comment)+'”</div></div>'}).join("");
+}
+$("cta-map").addEventListener("click",function(){showScreen("map")});
+$("cta-add").addEventListener("click",function(){showScreen("add")});
+$("sss-map-btn").addEventListener("click",function(){showScreen("map")});
+$("about-map-btn").addEventListener("click",function(){showScreen("map")});
+$("thank-home-btn").addEventListener("click",function(){showScreen("home")});
+$("thank-map-btn").addEventListener("click",function(){showScreen("map")});
+$("nf-home-btn").addEventListener("click",function(){showScreen("home")});
+$("nf-map-btn").addEventListener("click",function(){showScreen("map")});
+$("sticky-cta").addEventListener("click",function(){location.hash="#/iletisim"});
+$("contact-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var msg=($("contact-msg").value||"").trim();
+  if(!msg){showToast("Lütfen mesajınızı yazın");$("contact-msg").focus();return;}
+  var list=loadJSON("nc_contact",[]);
+  list.push({name:($("contact-name").value||"").trim(),email:($("contact-email").value||"").trim(),msg:msg,ts:Date.now()});
+  saveJSON("nc_contact",list);
+  e.target.reset();
+  $("tesekkur-msg").textContent="Mesajınız bize ulaştı. En kısa sürede dönüş yapacağız.";
+  showScreen("tesekkur");
+});
+document.querySelectorAll(".navbtn").forEach(function(b){b.addEventListener("click",function(){showScreen(b.dataset.screen)})});
+$("detail-back").addEventListener("click",function(){
+  showScreen("map");
+  if(userLocation)requestAnimationFrame(function(){map.setView(userLocation,14)});
+});
+$("vakit-pill").addEventListener("click",function(){showScreen("home")});
+$("vakit-pill").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();showScreen("home")}});
+
+map=L.map("leaflet-map",{zoomControl:false}).setView([userLat,userLng],14);
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',maxZoom:19}).addTo(map);
+requestAnimationFrame(function(){map.invalidateSize()});
+
+var userLocation=null,userMarker=null,arrivalWatchId=null,initialLoadDone=false,movedDistance=0,lastFetchLat=0,lastFetchLng=0;
+var routePending=false,locationStarted=false;
+
+function updateUserMarker(lat,lng){
+  var ll=L.latLng(lat,lng);
+  if(userMarker){userMarker.setLatLng(ll);}
+  else{
+    userMarker=L.circleMarker(ll,{radius:8,fillColor:"#C9A24B",fillOpacity:1,color:"#fff",weight:3}).addTo(map);
+    userMarker.bindPopup("<b>Konumunuz</b>");
+  }
+}
+function loadAround(lat,lng,recenter){
+  initialLoadDone=true;
+  fetchPrayerTimes(lat,lng);
+  fetchNearbyMosques(lat,lng);
+  lastFetchLat=lat;lastFetchLng=lng;
+  updateAddLoc();
+  if(recenter)map.setView(L.latLng(lat,lng),14);
+}
+function startArrivalWatch(){
+  if(arrivalWatchId)return;
+  if(!navigator||!navigator.geolocation)return;
+  arrivalWatchId=navigator.geolocation.watchPosition(checkArrival,function(){},{enableHighAccuracy:true,maximumAge:10000,timeout:15000});
+}
+function stopArrivalWatch(){
+  if(arrivalWatchId){navigator.geolocation.clearWatch(arrivalWatchId);arrivalWatchId=null;}
+}
+function onLocSuccess(pos){
+  var lat=pos.coords.latitude,lng=pos.coords.longitude;
+  userLat=lat;userLng=lng;userLocation=L.latLng(lat,lng);
+  $("geo-banner").classList.remove("show");
+  if(!$("location-text").textContent||$("location-text").textContent==="Konum al\u0131n\u0131yor…")$("location-text").textContent="Konumunuz";
+  updateUserMarker(lat,lng);
+  if(!initialLoadDone){
+    loadAround(lat,lng,true);
+  }else if(lastFetchLat&&lastFetchLng){
+    movedDistance=haversine(lastFetchLat,lastFetchLng,lat,lng);
+    if(movedDistance>500)loadAround(lat,lng,false);
+  }
+  startArrivalWatch();
+}
+function onLocErr(){
+  $("geo-banner").classList.add("show");
+  $("geo-banner-text").textContent="Konum al\u0131namad\u0131, varsay\u0131lan kullan\u0131l\u0131yor";
+  if(!initialLoadDone)loadAround(userLat,userLng,false);
+  startArrivalWatch();
+}
+var locRetryCount=0,locFallbackUsed=false;
+function tryBrowserLocation(){
+  if(!navigator||!navigator.geolocation){tryIpLocation();return;}
+  navigator.geolocation.getCurrentPosition(onLocSuccess,function(){
+    locRetryCount++;
+    if(locRetryCount<2){setTimeout(tryBrowserLocation,900);}else{tryIpLocation();}
+  },{enableHighAccuracy:true,timeout:8000,maximumAge:15000});
+}
+function applyIpLocation(lat,lng,city){
+  if(initialLoadDone)return;
+  ipCity=city||"";
+  userLat=lat;userLng=lng;userLocation=L.latLng(lat,lng);
+  updateUserMarker(lat,lng);
+  loadAround(lat,lng,true);
+  $("geo-banner").classList.remove("show");
+  $("location-text").textContent=city?("Yakla\u015F\u0131k: "+city):"Yakla\u015F\u0131k konum (IP)";
+  startArrivalWatch();
+}
+function tryIpLocation(){
+  if(locFallbackUsed||initialLoadDone)return;
+  locFallbackUsed=true;
+  $("geo-banner").classList.add("show");
+  $("geo-banner-text").textContent="Taray\u0131c\u0131 konuma izin vermedi, IP ile tahmin ediliyor…";
+  fetch("https://ipwho.is/")
+    .then(function(r){if(!r.ok)throw new Error("ipwho");return r.json()})
+    .then(function(d){
+      if(d&&typeof d.latitude==="number"&&typeof d.longitude==="number"){
+        applyIpLocation(d.latitude,d.longitude,d.city||(d.country||"").toLowerCase());
+      }else{throw new Error("badIpwho");}
+    })
+    .catch(function(){
+      return fetch("https://ipapi.co/json/")
+        .then(function(r){if(!r.ok)throw new Error("ipapi");return r.json()})
+        .then(function(d){
+          if(d&&typeof d.latitude==="number"&&typeof d.longitude==="number"){
+            applyIpLocation(d.latitude,d.longitude,d.city||"");
+          }else{throw new Error("badIpapi");}
+        })
+        .catch(function(){onLocErr();});
+    });
+}
+function startLocation(){
+  if(locationStarted||!currentUser())return;
+  locationStarted=true;
+  tryBrowserLocation();
+}
+map.on("click",function(){if($("map-sheet"))$("map-sheet").classList.remove("show")});
+
+var places=[],markers=[];
+function getPlacePoly(lat2,lon2){
+  var q="[out:json][timeout:25];(node[amenity=place_of_worship][religion=muslim](around:1500,"+lat2+","+lon2+");way[amenity=place_of_worship][religion=muslim](around:1500,"+lat2+","+lon2+");relation[amenity=place_of_worship][religion=muslim](around:1500,"+lat2+","+lon2+");node[building=mosque](around:1500,"+lat2+","+lon2+");way[building=mosque](around:1500,"+lat2+","+lon2+");relation[building=mosque](around:1500,"+lat2+","+lon2+"););out center 20;";
+  return fetch("https://overpass-api.de/api/interpreter",{method:"POST",body:"data="+encodeURIComponent(q)})
+    .then(function(r){if(!r.ok)throw new Error("overpass http "+r.status);return r.json()});
+}
+function showNearbySkeleton(){
+  var el=$("home-nearby-list");
+  if(el)el.innerHTML='<div class="skel-card" aria-live="polite">Mescitler yükleniyor…</div>';
+}
+function tagsFor(el){
+  var t=el.tags||{},out=[" Cami / Mescit"];
+  if(t.wheelchair==="yes")out.push("Eri\u015Filebilir");
+  if(t.toilets==="yes"||t.toilets_wheelchair==="yes")out.push("Abdesthane");
+  if(t.women==="yes"||t.female==="yes"||t.women_section==="yes")out.push("Kad\u0131nlar \u0130\u00E7in");
+  if(t.operator)out.push(esc(t.operator));
+  return out;
+}
+function fetchNearbyMosques(lat,lng){
+  showNearbySkeleton();
+  getPlacePoly(lat,lng).then(function(d){
+    places=[];
+    if(d.elements&&d.elements.length){
+      d.elements.forEach(function(el){
+        var lat2=el.lat,lon2=el.lon;
+        if(lat2==null||lon2==null){if(el.center){lat2=el.center.lat;lon2=el.center.lon;}else return;}
+        var nm=(el.tags&&el.tags.name)?el.tags.name:"Mescit";
+        var distM=Math.round(haversine(lat,lng,lat2,lon2));
+        places.push({key:(el.type||"node")+"/"+(el.id!==undefined?el.id:places.length),name:nm,lat:lat2,lon:lon2,dist:distText(distM),distM:distM,tags:tagsFor(el)});
+      });
+    }
+    places.sort(function(a,b){return a.distM-b.distM});
+    seedSampleMosques(lat,lng);
+    places.sort(function(a,b){return a.distM-b.distM});
+    renderMapMarkers();renderNearbyList();renderListScreen();
+  }).catch(function(){
+    places=[];
+    seedSampleMosques(lat,lng);
+    renderMapMarkers();renderNearbyList();renderListScreen();
+  });
+}
+function seedSampleMosques(lat,lng){
+  var seedSample="sample-canakkale";
+  if(places.some(function(p){return p.key===seedSample}))return;
+  places.push({key:seedSample,name:"Örnek Mescit – Çanakkale",lat:40.14776,lon:26.40707,dist:distText(Math.round(haversine(lat,lng,40.14776,26.40707))),distM:Math.round(haversine(lat,lng,40.14776,26.40707)),tags:[" Cami / Mescit","Örnek Kayıt"]});
+}
+function renderMapMarkers(){
+  markers.forEach(function(m){map.removeLayer(m)});markers=[];
+  places.forEach(function(p){
+    var icon=L.divIcon({className:"",html:'<div style="width:32px;height:40px;position:relative"><div style="position:absolute;bottom:2px;left:50%;transform:translateX(-50%);width:12px;height:4px;border-radius:50%;background:rgba(0,0,0,.25)"></div><div style="position:absolute;top:0;left:50%;margin-left:-16px;width:32px;height:32px;border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#2563EB;box-shadow:0 4px 10px rgba(37,99,235,.35);display:flex;align-items:center;justify-content:center"><div style="width:8px;height:8px;border-radius:50%;background:#fff;transform:rotate(45deg)"></div></div></div>',iconSize:[32,40],iconAnchor:[16,40]});
+    var m=L.marker([p.lat,p.lon],{icon:icon}).addTo(map);
+    m.on("click",function(e){L.DomEvent.stopPropagation(e);openSheet(this._p)});
+    m._p=p;
+    markers.push(m);
+  });
+  applyFilter(currentFilter);
+}
+var currentFilter="all";
+function applyFilter(f){
+  currentFilter=f;
+  var nf=normalize(f);
+  markers.forEach(function(m){
+    var show=f==="all";
+    if(!show){show=m._p.tags.some(function(t){return normalize(t).indexOf(nf)>-1})}
+    m.setOpacity(show?1:.2);m.setZIndexOffset(show?1:-50);
+  });
+  renderListScreen();
+}
+function nearbyMetaText(p){
+  var pr=placeRating(p.key);
+  if(pr)return'<span class="star">'+starText(pr.avg)+'</span> '+pr.avg.toFixed(1)+' \u00B7 '+esc(p.dist);
+  return "Hen\u00FCz de\u011Ferlendirme yok \u00B7 "+esc(p.dist);
+}
+function renderNearbyList(){
+  var el=$("home-nearby-list");
+  if(!places.length){el.innerHTML='<div class="empty-state"><p>Bu \u00E7evrede mescit bulunamad\u0131.</p></div>';return;}
+  el.innerHTML=places.slice(0,5).map(function(p){return'<div class="nearby-card" data-idx="'+places.indexOf(p)+'" tabindex="0" role="button"><div class="nearby-thumb" aria-hidden="true">'+THUMB+'</div><div class="nearby-info"><div class="name">'+esc(p.name)+'</div><div class="meta">'+nearbyMetaText(p)+'</div></div></div>'}).join("");
+}
+$("home-nearby-list").addEventListener("click",function(e){
+  var c=e.target.closest(".nearby-card");
+  if(c)openSheet(places[parseInt(c.dataset.idx,10)]);
+});
+$("home-nearby-list").addEventListener("keydown",function(e){
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  var c=e.target.closest(".nearby-card");
+  if(c){e.preventDefault();openSheet(places[parseInt(c.dataset.idx,10)]);}
+});
+function listVisible(p){
+  if(currentFilter==="all")return true;
+  var nf=normalize(currentFilter);
+  return p.tags.some(function(t){return normalize(t).indexOf(nf)>-1});
+}
+function renderListScreen(){
+  var el=$("mosque-list"),empty=$("list-empty");
+  if(!el)return;
+  var cnt=$("list-count");
+  if(cnt)cnt.textContent=(places.filter(listVisible).length+" yer bulundu");
+  var fl=$("list-loc-text");
+  if(fl){fl.textContent=$("location-text").textContent||"Konum alınıyor…";}
+  var items=places.filter(listVisible).map(function(p,i){
+    var pr=placeRating(p.key);
+    var meta=pr?('<span class="star">'+starText(pr.avg)+'</span> '+pr.avg.toFixed(1)+' \u00B7 '+esc(p.dist)):("Hen\u00FCz de\u011Ferlendirme yok \u00B7 "+esc(p.dist));
+    return'<div class="nearby-card" data-idx="'+places.indexOf(p)+'" tabindex="0" role="button"><div class="nearby-thumb" aria-hidden="true">'+THUMB+'</div><div class="nearby-info"><div class="name">'+esc(p.name)+'</div><div class="meta">'+meta+'</div></div></div>';
+  }).join("");
+  empty.style.display=items?"none":"block";
+  el.innerHTML=items;
+}
+$("mosque-list").addEventListener("click",function(e){
+  var c=e.target.closest(".nearby-card");
+  if(c)openSheet(places[parseInt(c.dataset.idx,10)]);
+});
+$("mosque-list").addEventListener("keydown",function(e){
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  var c=e.target.closest(".nearby-card");
+  if(c){e.preventDefault();openSheet(places[parseInt(c.dataset.idx,10)]);}
+});
+
+var curSP=null;
+function updateSheetMeta(p){
+  $("sheet-name").textContent=p.name;
+  var pr=placeRating(p.key);
+  var meta=pr?('<span class="star">'+starText(pr.avg)+'</span> '+pr.avg.toFixed(1)+' \u00B7 '+esc(p.dist)):("Hen\u00FCz de\u011Ferlendirme yok \u00B7 "+esc(p.dist));
+  $("sheet-meta").innerHTML=meta;
+  $("sheet-tags").innerHTML=p.tags.map(function(t){return'<span class="tag">'+esc(t)+'</span>'}).join("");
+  var fb=$("sheet-fav");
+  var on=isFavKey(p.key);
+  if(on){fb.textContent="Favorilerden \u00C7\u0131kar";fb.setAttribute("aria-label","Favorilerden ç\u0131kar");}
+  else {fb.textContent="Favorilere Ekle";fb.setAttribute("aria-label","Favorilere ekle");}
+}
+function openSheet(p){
+  if(!p)return;
+  curSP=p;
+  updateSheetMeta(p);
+  fillSheetAddr(p);
+  $("map-sheet").classList.add("show");
+  $("sheet-detail").onclick=function(){openDetail(p)};
+  var db=$("sheet-directions");db.textContent="Yol Tarifi Al";db.onclick=function(){toggleRoute(p,db)};
+  $("rc-close").onclick=function(){clearRoute()};
+  $("sheet-fav").onclick=function(){toggleFav(p)};
+  if(userLocation){
+    var b=L.latLngBounds(userLocation,L.latLng(p.lat,p.lon));
+    map.fitBounds(b,{padding:[80,80],maxZoom:16});
+  }
+}
+function isFavKey(key){return getFavs().some(function(f){return f.key===key})}
+function toggleFav(p){
+  var favs=getFavs(),i=-1;
+  for(var x=0;x<favs.length;x++){if(favs[x].key===p.key){i=x;break;}}
+  if(i>-1){favs.splice(i,1);showToast("Favorilerden \u00E7\u0131kar\u0131ld\u0131");}
+  else{favs.push({key:p.key,name:p.name,lat:p.lat,lon:p.lon});showToast("Favorilere eklendi");}
+  saveFavs(favs);
+  updateSheetMeta(p);
+  renderFavList();
+  refreshProfile();
+}
+function renderFavList(){
+  var favs=getFavs(),list=$("fav-list"),empty=$("fav-empty");
+  if(!favs.length){empty.style.display="block";list.innerHTML="";return;}
+  empty.style.display="none";
+  list.innerHTML=favs.map(function(f){
+    var d="";
+    if(userLocation){d=distText(Math.round(haversine(userLat,userLng,f.lat,f.lon)));}
+    return'<div class="fav-card" data-k="'+esc(f.key)+'" tabindex="0" role="button"><div class="nearby-thumb" aria-hidden="true">'+THUMB+'</div><div class="nearby-info"><div class="name">'+esc(f.name)+'</div><div class="meta">'+d+'</div></div><button class="fav-x" data-k="'+esc(f.key)+'" aria-label="Favorilerden ç\u0131kar">\u2715</button></div>';
+  }).join("");
+}
+$("fav-list").addEventListener("click",function(e){
+  var x=e.target.closest(".fav-x");
+  if(x){
+    e.stopPropagation();
+    var favs=getFavs();
+    var f=favs.find(function(f){return f.key===x.dataset.k});
+    if(f){toggleFav(f);}
+    return;
+  }
+  var card=e.target.closest(".fav-card");
+  if(card){
+    var favs2=getFavs();
+    var f2=favs2.find(function(f){return f.key===card.dataset.k});
+    if(f2){showScreen("map");openSheet(placeForFav(f2));}
+  }
+});
+$("fav-list").addEventListener("keydown",function(e){
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  var card=e.target.closest(".fav-card");
+  if(card){e.preventDefault();var fv=getFavs().find(function(f){return f.key===card.dataset.k});if(fv){showScreen("map");openSheet(placeForFav(fv));}}
+});
+function placeForFav(f){
+  var found=places.find(function(p){return p.key===f.key});
+  if(found)return found;
+  return{key:f.key,name:f.name,lat:f.lat,lon:f.lon,dist:distText(haversine(userLat,userLng,f.lat,f.lon)),distM:0,tags:[" Cami / Mescit"]};
+}
+
+var routeActive=false,routeLine=null,currentMode="foot";
+document.querySelectorAll(".mode-btn").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".mode-btn").forEach(function(x){x.classList.remove("on");x.setAttribute("aria-checked","false")});
+    b.classList.add("on");b.setAttribute("aria-checked","true");
+    currentMode=b.dataset.mode;
+    if(routeActive&&curSP&&!routePending){clearRoute();toggleRoute(curSP,$("sheet-directions"));}
+  });
+});
+function toggleRoute(p,btn){
+  if(routePending)return;
+  if(routeActive){clearRoute();btn.textContent="Yol Tarifi Al";return;}
+  if(!userLocation){showToast("Konumunuz al\u0131namad\u0131");return;}
+  routePending=true;
+  var prof=currentMode==="car"?"car":"foot";
+  $("route-card").classList.add("show");$("rc-main").textContent="Hesaplan\u0131yor…";
+  $("rc-sub").textContent=(currentMode==="car"?"Ara\u00E7la":"Y\u00FCr\u00FCyerek")+" rota getiriliyor";
+  $("rc-icon").innerHTML='<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18V8a2 2 0 0 1 2-2h10"/><path d="M14 10l4-4-4-4"/></svg>';
+  fetch("https://router.project-osrm.org/route/v1/"+prof+"/"+userLocation.lng+","+userLocation.lat+";"+p.lon+","+p.lat+"?overview=full&geometries=geojson")
+    .then(function(r){if(!r.ok)throw new Error("osrm http "+r.status);return r.json()})
+    .then(function(d){
+      routePending=false;
+      if(d.code==="Ok"&&d.routes&&d.routes[0]){
+        var rt=d.routes[0];var co=rt.geometry.coordinates.map(function(c){return[c[1],c[0]]});
+        if(routeLine){map.removeLayer(routeLine);}
+        routeLine=L.polyline(co,{color:"#2563EB",weight:5,opacity:.8,dashArray:currentMode==="car"?null:"8,6"}).addTo(map);
+        map.fitBounds(routeLine.getBounds(),{padding:[60,60]});
+        var dk=Math.max(1,Math.round(rt.duration/60));
+        $("rc-main").textContent=(rt.distance/1000).toFixed(1)+" km";
+        $("rc-sub").textContent=(currentMode==="car"?"Ara\u00E7la: ":"Y\u00FCr\u00FCyerek: ")+dk+" dk";
+        routeActive=true;btn.textContent="Rotay\u0131 Kapat";
+      }else{$("rc-main").textContent="Rota bulunamad\u0131";$("rc-sub").textContent="Tekrar deneyin";}
+    }).catch(function(){routePending=false;$("rc-main").textContent="Ba\u011Flant\u0131 hatas\u0131";$("rc-sub").textContent="\u0130nternet kontrol edin"});
+}
+function clearRoute(){
+  if(routeLine){map.removeLayer(routeLine);routeLine=null;}
+  routeActive=false;routePending=false;
+  $("route-card").classList.remove("show");
+  var db=$("sheet-directions");if(db)db.textContent="Yol Tarifi Al";
+}
+document.querySelectorAll(".chip").forEach(function(c){
+  c.addEventListener("click",function(){
+    document.querySelectorAll(".chip").forEach(function(x){x.classList.remove("on");x.setAttribute("aria-checked","false")});
+    c.classList.add("on");c.setAttribute("aria-checked","true");
+    applyFilter(c.dataset.f);
+  });
+});
+
+var hasArrived=false,arrivalPlace=null,skippedArrivals={};
+function checkArrival(pos){
+  if(hasArrived||!currentUser())return;
+  var lat=pos.coords.latitude,lng=pos.coords.longitude;
+  for(var i=0;i<places.length;i++){
+    if(skippedArrivals[places[i].key])continue;
+    if(haversine(lat,lng,places[i].lat,places[i].lon)<150){
+      hasArrived=true;arrivalPlace=places[i];showArrivalModal(places[i]);break;
+    }
+  }
+}
+var selectedStar=0,catScores={cleanliness:0,accessibility:0,ablution:0};
+function resetArrivalUI(){
+  selectedStar=0;catScores={cleanliness:0,accessibility:0,ablution:0};
+  document.querySelectorAll(".am-star").forEach(function(x){x.classList.remove("on");x.setAttribute("aria-checked","false")});
+  document.querySelectorAll(".am-cat-val").forEach(function(x){x.classList.remove("on");x.setAttribute("aria-checked","false")});
+  document.querySelectorAll(".am-cat").forEach(function(x){x.classList.remove("on")});
+  if($("am-comment"))$("am-comment").value="";
+  updateSubmitState();
+}
+function dismissArrival(){
+  $("arrival-modal").classList.remove("show");
+  if(arrivalPlace)skippedArrivals[arrivalPlace.key]=true;
+  hasArrived=false;arrivalPlace=null;
+}
+function showArrivalModal(p){
+  $("am-title").textContent=p.name+trDative(p.name)+" Ula\u015Ft\u0131n\u0131z!";
+  $("am-desc").textContent="Deneyiminizi puanlayabilir veya \u201CSonra Puanla\u201D ile ge\u00E7ebilirsiniz.";
+  resetArrivalUI();
+  $("arrival-modal").classList.add("show");
+  var st=$("arrival-modal").querySelector(".am-star");
+  if(st)st.focus();
+}
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape"&&$("arrival-modal")&&$("arrival-modal").classList.contains("show")){
+    dismissArrival();
+  }
+});
+function closeArrivalManual(){
+  if(!arrivalPlace){dismissArrival();return;}
+  dismissArrival();
+  showToast("Sonra puanlayabilirsiniz");
+}
+document.querySelectorAll(".am-star").forEach(function(s){
+  s.addEventListener("click",function(){
+    selectedStar=parseInt(s.dataset.star,10);
+    document.querySelectorAll(".am-star").forEach(function(x){x.classList.toggle("on",parseInt(x.dataset.star,10)<=selectedStar);x.setAttribute("aria-checked",parseInt(x.dataset.star,10)===selectedStar?"true":"false")});
+    updateSubmitState();
+  });
+});
+document.querySelectorAll(".am-cat-val").forEach(function(v){
+  function setVal(){
+    var cat=v.closest(".am-cat").dataset.cat,val=parseInt(v.dataset.val,10);
+    catScores[cat]=val;
+    v.closest(".am-cat-vals").querySelectorAll(".am-cat-val").forEach(function(x){x.classList.toggle("on",parseInt(x.dataset.val,10)===val);x.setAttribute("aria-checked",parseInt(x.dataset.val,10)===val?"true":"false")});
+    v.closest(".am-cat").classList.add("on");
+    updateSubmitState();
+  }
+  v.addEventListener("click",setVal);
+  v.addEventListener("keydown",function(e){
+    if(e.key==="Enter"||e.key===" "){e.preventDefault();setVal();}
+  });
+});
+function updateSubmitState(){var sb=$("am-submit");sb.disabled=!(selectedStar>0&&catScores.cleanliness>0&&catScores.accessibility>0&&catScores.ablution>0);}
+$("am-submit").addEventListener("click",function(){
+  if(selectedStar===0||!arrivalPlace)return;
+  saveArrivalRating(arrivalPlace,selectedStar,catScores,$("am-comment").value);
+  $("arrival-modal").classList.remove("show");
+  showToast("Puan\u0131n\u0131z kaydedildi. Te\u015Fekk\u00FCrler");
+  stopArrivalWatch();
+  hasArrived=false;arrivalPlace=null;
+  refreshProfile();
+});
+$("am-skip").addEventListener("click",function(){closeArrivalManual()});
+
+function photosFor(key){
+  var db=getDB();
+  return(db.photos||[]).filter(function(ph){return ph.key===key&&ph.dataUrl}).map(function(ph){return ph.dataUrl});
+}
+function openDetail(p){
+  if(!p)return;
+  $("detail-name").textContent=p.name;
+  var pr=placeRating(p.key);
+  if(pr){
+    $("detail-rating").textContent=pr.avg.toFixed(1);
+    $("detail-reviewcount").textContent=pr.count+" de\u011Ferlendirme";
+  }else{
+    $("detail-rating").textContent="\u2013";
+    $("detail-reviewcount").textContent="Hen\u00FCz de\u011Ferlendirme yok";
+  }
+  $("detail-amenities").innerHTML=p.tags.map(function(t){return'<span class="tag">'+esc(t)+'</span>'}).join("");
+  $("detail-gmaps").href=gmapsUrl(p.lat,p.lon);
+  $("detail-addr").textContent="Adres yükleniyor…";
+  resolveAddr(p.lat,p.lon).then(function(a){
+    var parts=[];
+    if(a.district)parts.push(a.district);
+    if(a.province&&parts.indexOf(a.province)===-1)parts.push(a.province);
+    if(a.country)parts.push(a.country);
+    $("detail-addr").textContent=parts.join(", ")||"Adres bulunamadı";
+  }).catch(function(){$("detail-addr").textContent="Adres bulunamadı"});
+  var phs=photosFor(p.key);
+  if(phs.length){
+    $("detail-photos").innerHTML=phs.map(function(u,ix){return'<img class="photo-thumb" src="'+u+'" alt="'+esc(p.name)+' mescidi foto\u011Fraf\u0131 '+(ix+1)+'" loading="lazy" decoding="async">'}).join("");
+  }else{
+    $("detail-photos").innerHTML='<div class="photo-empty">Hen\u00FCz foto\u011Fraf yok</div>';
+  }
+  var a=aggFor(p.key);
+  ["cleanly","access","ablution"].forEach(function(k,i){
+    var ck=["cleanliness","accessibility","ablution"][i];
+    var bar=$("bd-fill-"+k),val=$("bd-val-"+k);
+    if(a&&a.cats&&a.cats[ck]&&a.cats[ck].n>0){
+      var v=a.cats[ck].sum/a.cats[ck].n;
+      bar.style.width=(v/5*100)+"%";
+      val.textContent=v.toFixed(1);
+    }else{
+      bar.style.width="0%";
+      val.textContent="\u2013";
+    }
+  });
+  var rv=$("detail-reviews");
+  if(a&&a.reviews.length){
+    rv.innerHTML=a.reviews.slice().sort(function(x,y){return y.ts-x.ts}).map(function(r){
+      var txt=esc(r.comment)||'<span style="color:var(--ink-soft)">Yorum yaz\u0131lmad\u0131.</span>';
+      return'<div class="review"><div class="review-head"><div class="review-user">'+esc(r.name)+'</div><div class="star">'+starText(r.star)+'</div></div><div class="review-text">'+txt+'</div></div>';
+    }).join("");
+  }else{
+    rv.innerHTML='<div class="review-empty">Hen\u00FCz yorum yok. Mescide var\u0131nca puanlayabilirsiniz.</div>';
+  }
+  showScreen("detail");
+}
+$("zoom-in").addEventListener("click",function(){map.zoomIn()});
+$("zoom-out").addEventListener("click",function(){map.zoomOut()});
+$("recenter-btn").addEventListener("click",function(){if(userLocation)map.setView(userLocation,14)});
+
+var selectedAmenities={};
+document.querySelectorAll(".amenity-choice").forEach(function(c){
+  c.addEventListener("click",function(){
+    c.classList.toggle("on");
+    var on=c.classList.contains("on");
+    c.setAttribute("aria-checked",on?"true":"false");
+    selectedAmenities[c.textContent.trim()]=on;
+  });
+  c.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();c.click()}});
+});
+var pendingPhotos=[];
+function renderPhotoPreview(){
+  $("photo-previews").innerHTML=pendingPhotos.map(function(u){return'<img src="'+u+'" alt="Seçilen fotoğraf">'}).join("");
+}
+function loadImage(dataUrl,cb){
+  var img=new Image();
+  img.onload=function(){
+    var c=document.createElement("canvas");
+    var scale=Math.min(1,480/Math.max(img.width,img.height));
+    c.width=Math.max(1,Math.round(img.width*scale));
+    c.height=Math.max(1,Math.round(img.height*scale));
+    var ctx=c.getContext("2d");
+    if(!ctx){cb(dataUrl);return;}
+    ctx.drawImage(img,0,0,c.width,c.height);
+    try{cb(c.toDataURL("image/jpeg",0.72));}catch(e){cb(dataUrl);}
+  };
+  img.onerror=function(){cb(dataUrl)};
+  img.src=dataUrl;
+}
+function handlePhotoFiles(files){
+  Array.from(files).slice(0,3).forEach(function(file){
+    if(!file.type||file.type.indexOf("image/")!==0)return;
+    var rd=new FileReader();
+    rd.onload=function(){
+      loadImage(rd.result,function(u){pendingPhotos.push(u);renderPhotoPreview();});
+    };
+    rd.readAsDataURL(file);
+  });
+}
+$("upload-box").addEventListener("click",function(){$("place-photo").click();});
+$("upload-box").addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();$("place-photo").click();}});
+$("place-photo").addEventListener("change",function(){handlePhotoFiles(this.files);this.value="";});
+function updateAddLoc(){
+  var el=$("add-loc");
+  if(userLocation){
+    var cnt=$("location-text").textContent||"";
+    el.textContent="Kay\u0131t konumu: "+userLat.toFixed(4)+", "+userLng.toFixed(4)+(cnt?(" \u00B7 "+cnt):"");
+  }else{
+    el.textContent="Konum bekleniyor…";
+  }
+}
+$("submit-place").addEventListener("click",function(){
+  if(!currentUser()){showScreen("login");return;}
+  var name=($("place-name").value||"").trim();
+  if(!name){showToast("Mescit ad\u0131 girin");$("place-name").focus();return;}
+  if(!userLocation){showToast("Kay\u0131t i\u00E7in konumunuz al\u0131nmal\u0131");return;}
+  var type=$("place-type").value||"Cami";
+  var tags=Object.keys(selectedAmenities).filter(function(k){return selectedAmenities[k]});
+  var pending=getPending();
+  pending.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,7),name:name,type:type,tags:tags,lat:userLat,lng:userLng,photos:pendingPhotos.slice(),ts:Date.now(),status:"beklemede"});
+  savePending(pending);
+  pendingPhotos=[];
+  renderPhotoPreview();
+  $("place-name").value="";
+  $("place-type").value="Cami";
+  document.querySelectorAll(".amenity-choice").forEach(function(c){c.classList.remove("on");c.setAttribute("aria-checked","false");selectedAmenities[c.textContent.trim()]=false});
+  showToast("Kayd\u0131n\u0131z al\u0131nd\u0131");
+  $("tesekkur-msg").textContent="Mescit kaydınız alındı ve incelenmek üzere sıraya eklendi. Onaylandığında haritada yayınlanacak.";
+  showScreen("tesekkur");
+  refreshProfile();
+});
+document.querySelectorAll(".amenity-choice").forEach(function(c){selectedAmenities[c.textContent.trim()]=false});
+
+var toastTimer=null;
+function showToast(msg){
+  var t=$("toast");t.textContent=msg;t.classList.add("show");
+  if(toastTimer)clearTimeout(toastTimer);
+  toastTimer=setTimeout(function(){t.classList.remove("show")},2600);
+}
+
+function authErr(msg){var el=$("auth-err");if(!el)return;el.textContent=msg;el.classList.add("show");}
+function authClear(){var el=$("auth-err");if(el)el.classList.remove("show");}
+function validEmail(e){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)}
+function setAuthTab(which){
+  var a=which==="reg";
+  $("tab-login").classList.toggle("on",!a);$("tab-login").setAttribute("aria-selected",a?"false":"true");
+  $("tab-reg").classList.toggle("on",a);$("tab-reg").setAttribute("aria-selected",a?"true":"false");
+  $("login-form").hidden=a;$("reg-form").hidden=!a;
+  authClear();
+}
+$("tab-login").addEventListener("click",function(){setAuthTab("login")});
+$("tab-reg").addEventListener("click",function(){setAuthTab("reg")});
+$("login-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var email=$("login-email").value,pass=$("login-pass").value;
+  authClear();
+  if(!validEmail(email)){authErr("Ge\u00E7erli bir e-posta girin");return;}
+  var users=getUsers(),u=users[email.trim().toLowerCase()];
+  if(!u||u.passHash!==hashPW(pass,u.salt)){authErr("E-posta veya \u015Fifre hatal\u0131");return;}
+  completeLogin(email.trim().toLowerCase());
+});
+$("reg-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  var name=$("reg-name").value.trim(),email=$("reg-email").value.trim().toLowerCase(),pass=$("reg-pass").value,pass2=$("reg-pass2").value;
+  authClear();
+  if(!name){authErr("Ad\u0131n\u0131z\u0131 girin");return;}
+  if(!validEmail(email)){authErr("Ge\u00E7erli bir e-posta girin");return;}
+  if(pass.length<6){authErr("\u015Eifre en az 6 karakter olmal\u0131");return;}
+  if(pass!==pass2){authErr("\u015Eifreler e\u015Fle\u015Fmiyor");return;}
+  var users=getUsers();
+  if(users[email]){authErr("Bu e-posta zaten kay\u0131tl\u0131. Giri\u015F yap\u0131n.");return;}
+  var salt=fnv1a(email+":"+Date.now());
+  users[email]={name:name,email:email,passHash:hashPW(pass,salt),salt:salt,createdAt:Date.now()};
+  saveUsers(users);
+  completeLogin(email);
+});
+$("google-btn").addEventListener("click",function(){showToast("Google ile giri\u015F yak\u0131nda aktif olacak")});
+function completeLogin(email){
+  setSession(email);
+  $("device").classList.remove("noauth");
+  authClear();
+  $("login-email").value="";$("login-pass").value="";$("reg-name").value="";$("reg-email").value="";$("reg-pass").value="";$("reg-pass2").value="";
+  showScreen("map");
+  startLocation();
+  refreshProfile();
+  renderFavList();
+  renderVakitGrid();
+  updateCountdown();
+}
+function logout(){
+  clearSession();
+  $("device").classList.add("noauth");
+  stopArrivalWatch();
+  locationStarted=false;
+  showScreen("login");
+}
+function refreshProfile(){
+  var u=currentUser();
+  if(!u)return;
+  $("profile-name").textContent=u.name;
+  $("profile-email").textContent=u.email;
+  $("profile-joined").textContent="Kat\u0131l\u0131m: "+new Date(u.createdAt).toLocaleDateString("tr-TR",{month:"long",year:"numeric"});
+  $("profile-avatar").textContent=(u.name.charAt(0)||u.email.charAt(0)).toUpperCase();
+  $("stat-places").textContent=getPending().length;
+  $("stat-favs").textContent=getFavs().length;
+  var db=getDB(),mine=0;
+  Object.keys(db.agg||{}).forEach(function(k){(db.agg[k].reviews||[]).forEach(function(r){if(r.email===u.email)mine++;})});
+  $("stat-ratings").textContent=mine;
+}
+$("logout-btn").addEventListener("click",function(){logout()});
+$("delete-btn").addEventListener("click",function(){
+  var u=currentUser();
+  if(!u)return;
+  if(!window.confirm("Hesab\u0131n\u0131z ve t\u00FCm verileriniz (puanlar, favoriler, kay\u0131tlar) silinecek. Emin misiniz?"))return;
+  var email=u.email;
+  var db=getDB();
+  Object.keys(db.agg||{}).forEach(function(k){
+    db.agg[k].reviews=(db.agg[k].reviews||[]).filter(function(r){return r.email!==email});
+    recomputeAgg(db,k);
+  });
+  db.photos=(db.photos||[]).filter(function(ph){return ph.email!==email});
+  saveDB(db);
+  var users=getUsers();
+  delete users[email];
+  saveUsers(users);
+  localStorage.removeItem(userKey()+"_favs");
+  localStorage.removeItem(userKey()+"_pending");
+  clearSession();
+  $("device").classList.add("noauth");
+  locationStarted=false;
+  stopArrivalWatch();
+  showScreen("login");
+  showToast("Hesab\u0131n\u0131z silindi");
+});
+
+function systemDark(){return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches}
+function applyTheme(){
+  var t=localStorage.getItem("nc_theme")||"system";
+  var dark=(t==="dark"||(t==="system"&&systemDark()));
+  document.documentElement.classList.toggle("theme-dark",dark);
+  document.querySelectorAll(".theme-opt").forEach(function(b){
+    var on=(b.dataset&&b.dataset.th)===t;
+    b.classList.toggle("on",on);b.setAttribute("aria-checked",on?"true":"false");
+  });
+  var st=document.getElementById("theme-state");
+  if(st) st.textContent = t==="system" ? ("Şu an: "+(dark?"koyu":"açık")+", cihaz ayarına uyuyor") : ("Şu an: "+(dark?"koyu":"açık")+" tema");
+}
+document.querySelectorAll(".theme-opt").forEach(function(b){
+  b.addEventListener("click",function(){localStorage.setItem("nc_theme",b.dataset.th);applyTheme()});
+});
+if(window.matchMedia){
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){
+    if((localStorage.getItem("nc_theme")||"system")==="system")applyTheme();
+  });
+}
+var session=getSession();
+if(session&&getUsers()[session]){
+  $("device").classList.remove("noauth");
+  showScreen("map");
+  startLocation();
+  refreshProfile();
+  renderFavList();
+}else{
+  $("device").classList.add("noauth");
+  showScreen("login");
+}
+applyTheme();
+if(!localStorage.getItem("nc_consent")){
+  $("consent-modal").classList.add("show");
+}
+$("consent-accept").addEventListener("click",function(){localStorage.setItem("nc_consent","1");$("consent-modal").classList.remove("show")});
+$("consent-later").addEventListener("click",function(){$("consent-modal").classList.remove("show")});
+document.querySelectorAll(".cm-links a").forEach(function(a){a.addEventListener("click",function(){$("consent-modal").classList.remove("show")})});
+renderVakitGrid();updateCountdown();
+renderTopReviews();
+var fy=$("f-year");if(fy)fy.textContent=new Date().getFullYear();
+if(location.hash)routeFromHash();
+function countdownLoop(){updateCountdown();setTimeout(countdownLoop,1000-(Date.now()%1000));}
+countdownLoop();
+})();</script>
+</body>
+</html>
